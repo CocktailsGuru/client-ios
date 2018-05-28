@@ -8,5 +8,5 @@ target 'CG2' do
   # Pods for CG2
 
   pod 'XLPagerTabStrip'
-
+  pod 'Alamofire', '~> 4.7'
 end

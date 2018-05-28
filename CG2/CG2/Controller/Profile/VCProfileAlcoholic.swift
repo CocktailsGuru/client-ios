@@ -25,9 +25,6 @@ class VCProfileAlcoholic: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileAlcoholicCell", for: indexPath) as? ProfileAlcoholicCell {
 
-            //asi inicializacia noveho
-           // let mov = movie[indexPath.row]
-           // cell.configureCell(mov)
             return cell
         } else {
             return UICollectionViewCell()
@@ -35,15 +32,7 @@ class VCProfileAlcoholic: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        var mov: Movie!
-//        //nemam vyhladavac filmov (search bar)
-//        /*if inSearchMode {
-//         mov = filteredMovie[indexPath.row]
-//         }else { */
-//        mov = movie[indexPath.row]
-//        //}
-//
-//        performSegue(withIdentifier: "MovieDetailVC", sender: mov)
+
     }
 
     //numer of all items in one section

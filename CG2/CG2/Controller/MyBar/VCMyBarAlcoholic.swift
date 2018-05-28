@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import XLPagerTabStrip
 
-
 struct MyBarAlcoholicStruct: Decodable {
     var id : Int!
     var name : String!
@@ -176,8 +175,16 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
     //settings for collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBarAlcoholicCell", for: indexPath) as? MyBarAlcoholicCell {
-        
-             let alco = MyBarAlcoholicStructsArr[indexPath.row]
+            
+            //items shadows
+            cell.layer.shadowColor = UIColor.darkGray.cgColor
+            cell.layer.shadowOffset = CGSize(width:0, height: 2.0)
+            cell.layer.shadowRadius = 2.0
+            cell.layer.shadowOpacity = 1.0
+            cell.layer.masksToBounds = false;
+            cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+            
+            let alco = MyBarAlcoholicStructsArr[indexPath.row]
             cell.configureCell(myBarAlcoholicItem: alco)
             return cell
         } else {
@@ -212,6 +219,18 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
         return CGSize(width: widthPerItem, height: heightPerItem)       // height:260 - ok
     }
     
+    //segue-passing data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vCMyBarAlcoholicDetail = segue.destination as? VCMyBarAlcoholicDetail{
+                        
+            if let myBarAlcoholicItemm = sender as? MyBarAlcoholicItem {
+                vCMyBarAlcoholicDetail.myBarAlcoholicItem = myBarAlcoholicItemm
+                //print(myBarAlcoholicItemm.rating)
+            }
+        }
+    }
+    
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "VCMyBarAlcoholicDetail" {
 //            if let vCMyBarAlcoholicDetail = segue.destination as? VCMyBarAlcoholicDetail{
@@ -224,9 +243,13 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
     
 }
 
-//Title
-extension VCMyBarAlcoholic : IndicatorInfoProvider {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "ALCOHOLIC")
+    //Title
+    extension VCMyBarAlcoholic : IndicatorInfoProvider {
+        func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+            return IndicatorInfo(title: "ALCOHOLIC")
+        }
     }
-}
+
+
+
+

@@ -13,7 +13,7 @@ class TableViewControllerTwo: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //print("[2]Vypise sa len raz, a to vtedy ked prvy krat po zapnuti appky prejdem na tento controller")
         
     }
 

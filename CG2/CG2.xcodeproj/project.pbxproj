@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F48FEED9A80B5774764BC621 /* Pods_CG2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84D9EC458465C30B183FA16 /* Pods_CG2.framework */; };
+		F7037AD920ADE84200647472 /* MBADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7037AD820ADE84200647472 /* MBADCell.swift */; };
+		F7037ADB20ADE87400647472 /* MBADItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7037ADA20ADE87400647472 /* MBADItems.swift */; };
 		F72C4DF8206A4C5E0051946A /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = F72C4DF7206A4C5E0051946A /* example.json */; };
 		F72C4DFC206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C4DFB206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift */; };
 		F72C4E00206D98320051946A /* VCMyBarAlcoholicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C4DFF206D98320051946A /* VCMyBarAlcoholicDetail.swift */; };
@@ -20,6 +22,8 @@
 		F73F08C720517EC100E769A5 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F08C620517EC100E769A5 /* FifthViewController.swift */; };
 		F73F08C920517ED600E769A5 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F08C820517ED600E769A5 /* SixthViewController.swift */; };
 		F73F08CB20517F7C00E769A5 /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F08CA20517F7C00E769A5 /* SeventhViewController.swift */; };
+		F74E346720A9CA5F000098AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74E346620A9CA5F000098AE /* Constants.swift */; };
+		F74E346920AA0E07000098AE /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74E346820AA0E07000098AE /* CocktailList.swift */; };
 		F771ED7D2063AE0C00C9C82A /* BaseVCMyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */; };
 		F771ED832063C55400C9C82A /* TableViewCellMyBarIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */; };
 		F771ED852063C58700C9C82A /* TableVCMybarIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED842063C58700C9C82A /* TableVCMybarIntro.swift */; };
@@ -42,6 +46,7 @@
 		F78E49232052C621009E838D /* TableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49222052C621009E838D /* TableViewCellThree.swift */; };
 		F78E49262052FE89009E838D /* BaseVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49252052FE89009E838D /* BaseVCCocktails.swift */; };
 		F78E4937205845E7009E838D /* HeaderVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4936205845E7009E838D /* HeaderVCCocktails.swift */; };
+		F7D472E020B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */; };
 		F7FAAD652064F48F00A1916D /* MyBarAlcoholicItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAAD642064F48F00A1916D /* MyBarAlcoholicItems.swift */; };
 		F7FAAD672064F7A600A1916D /* MyBarAlcoholicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAAD662064F7A600A1916D /* MyBarAlcoholicCell.swift */; };
 		F7FAAD6A20651F3200A1916D /* HeaderVCProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAAD6920651F3200A1916D /* HeaderVCProfile.swift */; };
@@ -55,6 +60,8 @@
 /* Begin PBXFileReference section */
 		301CC0282EECA8FA1B058895 /* Pods-CG2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CG2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CG2/Pods-CG2.debug.xcconfig"; sourceTree = "<group>"; };
 		E84D9EC458465C30B183FA16 /* Pods_CG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7037AD820ADE84200647472 /* MBADCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBADCell.swift; sourceTree = "<group>"; };
+		F7037ADA20ADE87400647472 /* MBADItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBADItems.swift; sourceTree = "<group>"; };
 		F72C4DF7206A4C5E0051946A /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		F72C4DFB206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMyBarAlcoholicDetail.swift; sourceTree = "<group>"; };
 		F72C4DFF206D98320051946A /* VCMyBarAlcoholicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarAlcoholicDetail.swift; sourceTree = "<group>"; };
@@ -69,6 +76,8 @@
 		F73F08C620517EC100E769A5 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		F73F08C820517ED600E769A5 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
 		F73F08CA20517F7C00E769A5 /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
+		F74E346620A9CA5F000098AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F74E346820AA0E07000098AE /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
 		F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCMyBar.swift; sourceTree = "<group>"; };
 		F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarIntro.swift; sourceTree = "<group>"; };
 		F771ED842063C58700C9C82A /* TableVCMybarIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVCMybarIntro.swift; sourceTree = "<group>"; };
@@ -91,6 +100,7 @@
 		F78E49222052C621009E838D /* TableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellThree.swift; sourceTree = "<group>"; };
 		F78E49252052FE89009E838D /* BaseVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCCocktails.swift; sourceTree = "<group>"; };
 		F78E4936205845E7009E838D /* HeaderVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVCCocktails.swift; sourceTree = "<group>"; };
+		F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarAlcoholicDetailReadMore.swift; sourceTree = "<group>"; };
 		F7FAAD642064F48F00A1916D /* MyBarAlcoholicItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarAlcoholicItems.swift; sourceTree = "<group>"; };
 		F7FAAD662064F7A600A1916D /* MyBarAlcoholicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarAlcoholicCell.swift; sourceTree = "<group>"; };
 		F7FAAD6920651F3200A1916D /* HeaderVCProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVCProfile.swift; sourceTree = "<group>"; };
@@ -161,6 +171,8 @@
 				F73F08AE2051708800E769A5 /* Assets.xcassets */,
 				F73F08B02051708800E769A5 /* LaunchScreen.storyboard */,
 				F73F08B32051708800E769A5 /* Info.plist */,
+				F74E346620A9CA5F000098AE /* Constants.swift */,
+				F74E346820AA0E07000098AE /* CocktailList.swift */,
 			);
 			path = CG2;
 			sourceTree = "<group>";
@@ -184,6 +196,7 @@
 			children = (
 				F7FAAD662064F7A600A1916D /* MyBarAlcoholicCell.swift */,
 				F7FAAD73206528C100A1916D /* ProfileAlcoholicCell.swift */,
+				F7037AD820ADE84200647472 /* MBADCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +206,7 @@
 			children = (
 				F7FAAD642064F48F00A1916D /* MyBarAlcoholicItems.swift */,
 				F7FAAD71206528AE00A1916D /* ProfileAlcoholicItems.swift */,
+				F7037ADA20ADE87400647472 /* MBADItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +244,7 @@
 				F771ED962063D24F00C9C82A /* VCMyBarAlcoholic.swift */,
 				F72C4DFB206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift */,
 				F72C4DFF206D98320051946A /* VCMyBarAlcoholicDetail.swift */,
+				F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */,
 				F771ED9A2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift */,
 				F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */,
 			);
@@ -284,7 +299,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tomáš Dobrotka";
 				TargetAttributes = {
 					F73F08A32051708800E769A5 = {
@@ -333,10 +348,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CG2/Pods-CG2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73F08C720517EC100E769A5 /* FifthViewController.swift in Sources */,
+				F7D472E020B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift in Sources */,
 				F771ED8D2063D21400C9C82A /* TableViewCellMyBarMyBar.swift in Sources */,
 				F73F08C920517ED600E769A5 /* SixthViewController.swift in Sources */,
 				F7FAAD6C20651F4400A1916D /* BaseVCProfile.swift in Sources */,
@@ -384,11 +402,13 @@
 				F771ED912063D22A00C9C82A /* TableViewCellMyBarShoppingList.swift in Sources */,
 				F78E491D2052C5A9009E838D /* TableViewControllerTwo.swift in Sources */,
 				F78E49212052C60C009E838D /* TableViewControllerThree.swift in Sources */,
+				F7037AD920ADE84200647472 /* MBADCell.swift in Sources */,
 				F7FAAD652064F48F00A1916D /* MyBarAlcoholicItems.swift in Sources */,
 				F78E49192052C231009E838D /* TableViewControllerOne.swift in Sources */,
 				F771ED852063C58700C9C82A /* TableVCMybarIntro.swift in Sources */,
 				F7FAAD72206528AE00A1916D /* ProfileAlcoholicItems.swift in Sources */,
 				F771ED972063D24F00C9C82A /* VCMyBarAlcoholic.swift in Sources */,
+				F74E346720A9CA5F000098AE /* Constants.swift in Sources */,
 				F73F08A82051708800E769A5 /* AppDelegate.swift in Sources */,
 				F771ED9B2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift in Sources */,
 				F72C4DFC206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift in Sources */,
@@ -399,10 +419,12 @@
 				F7FAAD74206528C100A1916D /* ProfileAlcoholicCell.swift in Sources */,
 				F7FAAD702065252C00A1916D /* VCProfileAlcoholic.swift in Sources */,
 				F771ED9D2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift in Sources */,
+				F7037ADB20ADE87400647472 /* MBADItems.swift in Sources */,
 				F72C4E00206D98320051946A /* VCMyBarAlcoholicDetail.swift in Sources */,
 				F78E4937205845E7009E838D /* HeaderVCCocktails.swift in Sources */,
 				F78E49232052C621009E838D /* TableViewCellThree.swift in Sources */,
 				F771ED872063D1EA00C9C82A /* TableVCMyBarMyCocktails.swift in Sources */,
+				F74E346920AA0E07000098AE /* CocktailList.swift in Sources */,
 				F7FAAD672064F7A600A1916D /* MyBarAlcoholicCell.swift in Sources */,
 				F771ED952063D24100C9C82A /* TableViewCellMyBarSuggestions.swift in Sources */,
 				F771ED892063D1FE00C9C82A /* TableViewCellMyBarMyCocktails.swift in Sources */,
@@ -446,6 +468,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -453,6 +476,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -480,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -503,6 +527,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -510,6 +535,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -531,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -547,7 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A92DW6C75Q;
 				INFOPLIST_FILE = CG2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tom.CG2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,7 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A92DW6C75Q;
 				INFOPLIST_FILE = CG2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tom.CG2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
