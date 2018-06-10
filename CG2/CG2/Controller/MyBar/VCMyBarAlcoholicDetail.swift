@@ -7,14 +7,48 @@
 //
 
 import UIKit
+import CoreData
 
 class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout   {
     
+    private class func getContext() -> NSManagedObjectContext{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        return appDelegate.persistentContainer.viewContext
+    }
+    
     @IBOutlet weak var VCMBADMainImage: UIImageView!
+    
     @IBOutlet weak var VCMBADScrollView: UIScrollView!
     
     @IBOutlet weak var MBADCollectionView: UICollectionView!
     
+    @IBOutlet weak var VCMBADMyBarSwitch: UISwitch!
+    
+    var myBarMyBarItems: [MyBarMyBarItem] = []
+    
+    @IBAction func VCMBADMyBarSwitchWasPressed(_ sender: UISwitch) {
+        
+        //pass data to Core Data MyBarMyBarItem Model
+        if ((VCMBADMyBarSwitch.isOn) && (!(myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title })))){    //when i tap, it is ON yet
+            fetchSecond()       //maybe .save should be in do{} section in fetchSecond()
+            self.save { (complete) in
+            }
+
+        }else if(!VCMBADMyBarSwitch.isOn){
+            fetchSecond()       //maybe .save should be in do{} section in fetchSecond()
+            if let index = myBarMyBarItems.index(where: { $0.myBarMyBarItemLbl == self.title }){
+                VCMyBarAlcoholicDetail.deleteObject(myBarMyBarItem: myBarMyBarItems[index])
+            }
+
+        }else{
+            print("ERROR: switch is not ON and not OFF!!!")
+        }
+        
+    }
+    
+    var imgName : String! = ""
+  
     var myBarAlcoholicItem: MyBarAlcoholicItem!
     
     override func viewDidLoad() {
@@ -40,7 +74,24 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
 
         self.title = myBarAlcoholicItem.name
         self.VCMBADMainImage.image = UIImage(named: "\(myBarAlcoholicItem.image)")
-        
+        self.imgName = myBarAlcoholicItem.image
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetch{(complete) in
+            if complete {
+                if myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) {
+                    // found
+                    print("YESSSSSSSSSSS")
+                    VCMBADMyBarSwitch.setOn(true, animated: false)
+                } else {
+                    // not
+                    print("NOOOOOOOOOOOO")
+                    VCMBADMyBarSwitch.setOn(false, animated: false)
+                }
+            }
+        }
     }
     
     //settings for collection view
@@ -111,9 +162,68 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
-
+    //save data to data model
+    func save(completion: (_ finished: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let myBarMyBarItem = MyBarMyBarItem(context: managedContext)
+        
+        myBarMyBarItem.myBarMyBarItemImg = imgName
+        myBarMyBarItem.myBarMyBarItemLbl = title
+        myBarMyBarItem.myBarMyBarItemSwitchStatus = true
+        
+        do{
+            try managedContext.save()
+            print("Succesfully saved data.")
+            completion(true)
+        } catch{
+            debugPrint("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
+    }
 }
 
-
-
-
+extension VCMyBarAlcoholicDetail{
+   
+    class func deleteObject(myBarMyBarItem:MyBarMyBarItem) -> Bool{
+        
+        let context = getContext()
+        context.delete(myBarMyBarItem)
+        do{
+            try context.save()
+            return true
+        }catch{
+            return false
+        }
+        
+    }
+    
+    func fetch(completion: (_ complete: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let fetchRequest = NSFetchRequest<MyBarMyBarItem>(entityName: "MyBarMyBarItem")
+        
+        do {
+            myBarMyBarItems = try managedContext.fetch(fetchRequest)
+            print("Succesfully fetched data.")
+            completion(true)
+        } catch{
+            debugPrint("Could not fetch: \(error.localizedDescription)")
+            completion(false)
+        }
+    }
+    
+    //maybe .save should be HERE in do{} section
+    func fetchSecond(){
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let fetchRequest = NSFetchRequest<MyBarMyBarItem>(entityName: "MyBarMyBarItem")
+        do {
+            myBarMyBarItems = try managedContext.fetch(fetchRequest)
+            print("SECOND. Succesfully fetched data.")
+            //completion(true)
+        } catch{
+            debugPrint("SECOND. Could not fetch: \(error.localizedDescription)")
+            // completion(false)
+        }
+    }
+    
+}

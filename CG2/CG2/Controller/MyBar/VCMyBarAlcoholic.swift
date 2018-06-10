@@ -126,6 +126,9 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
         
         var alcoArr = [MyBarAlcoholicStruct]()
         alcoArr = [alco1, alco2, alco3, alco4, alco5, alco6, alco7, alco8, alco9, alco10, alco11]
+        //print(alcoArr.count)
+        // print(alco3.calculatedRating)
+
 //END-DATA-simulation
 //************************************************************************************************
 //************************************************************************************************
@@ -133,7 +136,7 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
         collection.dataSource = self
         collection.delegate = self
 
-        parseAlcoholic(alcoArr: alcoArr)
+        //parseAlcoholic(alcoArr: alcoArr)
         
         //   let path = Bundle.main.path(forResource: "example", ofType: "json")!
     
@@ -146,8 +149,10 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
 //            print(colors.name)
 //        }
 //        catch {}
-        
-        
+      
+        //print(alcoArr)
+        parseAlcoholic(alcoArr: alcoArr)
+
         
    
     }
