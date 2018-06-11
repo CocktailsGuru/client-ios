@@ -78,7 +78,7 @@ class TableVCMyBarMyBar: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 
         let deleteAction = UITableViewRowAction(style: .normal, title: "DELETE") { (rowAction, indexPath) in
-            
+
             self.removeMyBarMyBarItem(atIndexPath: indexPath)
             self.fetchCoreDataObjects()
             tableView.deleteRows(at: [indexPath], with: .automatic)

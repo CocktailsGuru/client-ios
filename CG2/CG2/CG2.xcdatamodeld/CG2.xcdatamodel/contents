@@ -5,7 +5,13 @@
         <attribute name="myBarMyBarItemLbl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="myBarMyBarItemSwitchStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="MyBarShoppingListItem" representedClassName="MyBarShoppingListItem" syncable="YES" codeGenerationType="class">
+        <attribute name="myBarShoppingListItemImg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myBarShoppingListItemLbl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myBarShoppingListItemSwitchStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="MyBarMyBarItem" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="MyBarShoppingListItem" positionX="-54" positionY="18" width="128" height="90"/>
     </elements>
 </model>

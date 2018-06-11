@@ -24,8 +24,10 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var MBADCollectionView: UICollectionView!
     
     @IBOutlet weak var VCMBADMyBarSwitch: UISwitch!
+    @IBOutlet weak var VCMBADShoppingListSwitch: UISwitch!
     
     var myBarMyBarItems: [MyBarMyBarItem] = []
+    var myBarShoppingListItems: [MyBarShoppingListItem] = []
     
     @IBAction func VCMBADMyBarSwitchWasPressed(_ sender: UISwitch) {
         
@@ -46,6 +48,25 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
         }
         
     }
+    
+    @IBAction func VCMBASShoppingListWasPressed(_ sender: UISwitch) {
+        //pass data to Core Data MyBarShoppingListItem Model
+        if ((VCMBADShoppingListSwitch.isOn) && (!(myBarShoppingListItems.contains( where: { $0.myBarShoppingListItemLbl == self.title })))){    //when i tap, it is ON yet
+            fetchSecondShoppingList()       //maybe .save should be in do{} section in fetchSecond()
+            self.saveShoppingList { (complete) in
+            }
+            
+        }else if(!VCMBADShoppingListSwitch.isOn){
+            fetchSecondShoppingList()       //maybe .save should be in do{} section in fetchSecond()
+            if let index = myBarShoppingListItems.index(where: { $0.myBarShoppingListItemLbl == self.title }){
+                VCMyBarAlcoholicDetail.deleteObjectShoppingList(myBarShoppingListItem: myBarShoppingListItems[index])
+            }
+            
+        }else{
+            print("ERROR: switch is not ON and not OFF!!!")
+        }
+    }
+    
     
     var imgName : String! = ""
   
@@ -92,6 +113,20 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
                 }
             }
         }
+        self.fetchShoppingList{(complete) in
+            if complete {
+                if myBarShoppingListItems.contains( where: { $0.myBarShoppingListItemLbl == self.title }) {
+                    // found
+                    print("YESSSSSSSSSSS")
+                    VCMBADShoppingListSwitch.setOn(true, animated: false)
+                } else {
+                    // not
+                    print("NOOOOOOOOOOOO")
+                    VCMBADShoppingListSwitch.setOn(false, animated: false)
+                }
+            }
+        }
+
     }
     
     //settings for collection view
@@ -180,6 +215,26 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
             completion(false)
         }
     }
+    
+    func saveShoppingList(completion: (_ finished: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let myBarShoppingListItem = MyBarShoppingListItem(context: managedContext)
+        
+        myBarShoppingListItem.myBarShoppingListItemImg = imgName
+        myBarShoppingListItem.myBarShoppingListItemLbl = title
+        myBarShoppingListItem.myBarShoppingListItemSwitchStatus = true
+        
+        
+        do{
+            try managedContext.save()
+            print("Succesfully saved data.")
+            completion(true)
+        } catch{
+            debugPrint("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
+    }
+
 }
 
 extension VCMyBarAlcoholicDetail{
@@ -194,7 +249,18 @@ extension VCMyBarAlcoholicDetail{
         }catch{
             return false
         }
+    }
+    
+    class func deleteObjectShoppingList(myBarShoppingListItem:MyBarShoppingListItem) -> Bool{
         
+        let context = getContext()
+        context.delete(myBarShoppingListItem)
+        do{
+            try context.save()
+            return true
+        }catch{
+            return false
+        }
     }
     
     func fetch(completion: (_ complete: Bool) -> ()) {
@@ -212,12 +278,41 @@ extension VCMyBarAlcoholicDetail{
         }
     }
     
+    func fetchShoppingList(completion: (_ complete: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let fetchRequest = NSFetchRequest<MyBarShoppingListItem>(entityName: "MyBarShoppingListItem")
+        
+        do {
+            myBarShoppingListItems = try managedContext.fetch(fetchRequest)
+            print("Succesfully fetched data.")
+            completion(true)
+        } catch{
+            debugPrint("Could not fetch: \(error.localizedDescription)")
+            completion(false)
+        }
+    }
+    
+    
     //maybe .save should be HERE in do{} section
     func fetchSecond(){
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         let fetchRequest = NSFetchRequest<MyBarMyBarItem>(entityName: "MyBarMyBarItem")
         do {
             myBarMyBarItems = try managedContext.fetch(fetchRequest)
+            print("SECOND. Succesfully fetched data.")
+            //completion(true)
+        } catch{
+            debugPrint("SECOND. Could not fetch: \(error.localizedDescription)")
+            // completion(false)
+        }
+    }
+    
+    func fetchSecondShoppingList(){
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let fetchRequest = NSFetchRequest<MyBarShoppingListItem>(entityName: "MyBarShoppingListItem")
+        do {
+            myBarShoppingListItems = try managedContext.fetch(fetchRequest)
             print("SECOND. Succesfully fetched data.")
             //completion(true)
         } catch{

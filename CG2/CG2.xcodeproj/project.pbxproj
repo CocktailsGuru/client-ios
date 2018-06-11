@@ -203,6 +203,7 @@
 				F7FAAD73206528C100A1916D /* ProfileAlcoholicCell.swift */,
 				F7037AD820ADE84200647472 /* MBADCell.swift */,
 				F771ED8C2063D21400C9C82A /* TableViewCellMyBarMyBar.swift */,
+				F771ED902063D22A00C9C82A /* TableViewCellMyBarShoppingList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,7 +258,6 @@
 				F771ED882063D1FE00C9C82A /* TableViewCellMyBarMyCocktails.swift */,
 				F771ED8A2063D20C00C9C82A /* TableVCMyBarMyBar.swift */,
 				F771ED8E2063D21F00C9C82A /* TableVCMyBarShoppingList.swift */,
-				F771ED902063D22A00C9C82A /* TableViewCellMyBarShoppingList.swift */,
 				F771ED922063D23500C9C82A /* TableVCMyBarSuggestions.swift */,
 				F771ED942063D24000C9C82A /* TableViewCellMyBarSuggestions.swift */,
 				F771ED962063D24F00C9C82A /* VCMyBarAlcoholic.swift */,
