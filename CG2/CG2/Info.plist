@@ -41,8 +41,43 @@
 	</array>
     <key>NSAppTransportSecurity</key>
     <dict>
-        <key>NSAllowsArbitraryLoads</key>
+        
+        <key>NSAllowsLocalNetworking</key>
+        
         <true/>
+        
+        <key>NSExceptionDomains</key>
+        
+        <dict>
+            
+            <key>www.footyapps.com:8443</key>
+            
+            <dict>
+                
+                <key>NSIncludesSubdomains</key>
+                
+                <true/>
+                
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                
+                <false/>
+                
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                
+                <true/>
+                
+            </dict>
+            
+        </dict>
+        
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+        
+        <true/>
+        
+        <key>NSAllowsArbitraryLoads</key>
+        
+        <true/>
+        
     </dict>
 </dict>
 </plist>

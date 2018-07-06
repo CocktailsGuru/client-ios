@@ -1,15 +1,16 @@
 //
-//  CocktailList.swift
+//  CocktailDetail.swift
 //  CG2
 //
-//  Created by Tomáš Dobrotka on 14/05/2018.
+//  Created by Tomáš Dobrotka on 06/07/2018.
 //  Copyright © 2018 Tomáš Dobrotka. All rights reserved.
 //
 
+//TODO
 import UIKit
 import Alamofire
 
-class CocktailList{
+class CocktailDetail{
     var _id : Int!
     var _name : String!
     var _image : String!
@@ -61,7 +62,7 @@ class CocktailList{
     
     
     
-    func downloadCocktailList(completed: DownloadComplete) {
+    func downloadCocktailDetail(completed: DownloadComplete) {
         print("sssssss")
         let user = "=="
         let password = "=="
@@ -69,7 +70,7 @@ class CocktailList{
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
-        Alamofire.request(COCKTAILLISTURL,
+        Alamofire.request(BASE_URL,
                           method: .get,
                           parameters: nil,
                           encoding: URLEncoding.default,
@@ -86,20 +87,20 @@ class CocktailList{
     }
     
     
-//    func downloadCocktailList(completed: DownloadComplete) {
-//        //alamofire download
-//        let baseURL = URL(string: BASE_URL)!
-//
-//        Alamofire.request(baseURL).responseJSON { response in
-//
-//            let result = response.result
-//
-//            print(response)
-//
-//        }
-//
-//        completed()
-//
-//    }
+    //    func downloadCocktailList(completed: DownloadComplete) {
+    //        //alamofire download
+    //        let baseURL = URL(string: BASE_URL)!
+    //
+    //        Alamofire.request(baseURL).responseJSON { response in
+    //
+    //            let result = response.result
+    //
+    //            print(response)
+    //
+    //        }
+    //
+    //        completed()
+    //
+    //    }
     
 }
