@@ -24,6 +24,12 @@
 		F73F08CB20517F7C00E769A5 /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F08CA20517F7C00E769A5 /* SeventhViewController.swift */; };
 		F74E346720A9CA5F000098AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74E346620A9CA5F000098AE /* Constants.swift */; };
 		F74E346920AA0E07000098AE /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74E346820AA0E07000098AE /* CocktailList.swift */; };
+		F75801912105076A0070009D /* CocktailDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75801902105076A0070009D /* CocktailDetail.swift */; };
+		F7580193210507DC0070009D /* CocktailGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7580192210507DC0070009D /* CocktailGlass.swift */; };
+		F7580195210508150070009D /* CocktailMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7580194210508150070009D /* CocktailMethod.swift */; };
+		F7580197210509EA0070009D /* IngredientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7580196210509EA0070009D /* IngredientDetail.swift */; };
+		F758019921050A6F0070009D /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758019821050A6F0070009D /* IngredientType.swift */; };
+		F758019B21050AE90070009D /* MyIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758019A21050AE90070009D /* MyIngredient.swift */; };
 		F75E0B1720C6E5BC00788F0F /* CG2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75E0B1520C6E5BC00788F0F /* CG2.xcdatamodeld */; };
 		F771ED7D2063AE0C00C9C82A /* BaseVCMyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */; };
 		F771ED832063C55400C9C82A /* TableViewCellMyBarIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */; };
@@ -47,7 +53,7 @@
 		F78E49232052C621009E838D /* TableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49222052C621009E838D /* TableViewCellThree.swift */; };
 		F78E49262052FE89009E838D /* BaseVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49252052FE89009E838D /* BaseVCCocktails.swift */; };
 		F78E4937205845E7009E838D /* HeaderVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4936205845E7009E838D /* HeaderVCCocktails.swift */; };
-		F795E4C720F00A77001FC697 /* CocktailDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F795E4C620F00A77001FC697 /* CocktailDetail.swift */; };
+		F795E4C720F00A77001FC697 /* CocktailDetail2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F795E4C620F00A77001FC697 /* CocktailDetail2.swift */; };
 		F7D472E020B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */; };
 		F7FAAD652064F48F00A1916D /* MyBarAlcoholicItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAAD642064F48F00A1916D /* MyBarAlcoholicItems.swift */; };
 		F7FAAD672064F7A600A1916D /* MyBarAlcoholicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FAAD662064F7A600A1916D /* MyBarAlcoholicCell.swift */; };
@@ -80,6 +86,12 @@
 		F73F08CA20517F7C00E769A5 /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
 		F74E346620A9CA5F000098AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F74E346820AA0E07000098AE /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
+		F75801902105076A0070009D /* CocktailDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetail.swift; sourceTree = "<group>"; };
+		F7580192210507DC0070009D /* CocktailGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailGlass.swift; sourceTree = "<group>"; };
+		F7580194210508150070009D /* CocktailMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailMethod.swift; sourceTree = "<group>"; };
+		F7580196210509EA0070009D /* IngredientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetail.swift; sourceTree = "<group>"; };
+		F758019821050A6F0070009D /* IngredientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientType.swift; sourceTree = "<group>"; };
+		F758019A21050AE90070009D /* MyIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredient.swift; sourceTree = "<group>"; };
 		F75E0B1620C6E5BC00788F0F /* CG2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CG2.xcdatamodel; sourceTree = "<group>"; };
 		F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCMyBar.swift; sourceTree = "<group>"; };
 		F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarIntro.swift; sourceTree = "<group>"; };
@@ -103,7 +115,7 @@
 		F78E49222052C621009E838D /* TableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellThree.swift; sourceTree = "<group>"; };
 		F78E49252052FE89009E838D /* BaseVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCCocktails.swift; sourceTree = "<group>"; };
 		F78E4936205845E7009E838D /* HeaderVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVCCocktails.swift; sourceTree = "<group>"; };
-		F795E4C620F00A77001FC697 /* CocktailDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetail.swift; sourceTree = "<group>"; };
+		F795E4C620F00A77001FC697 /* CocktailDetail2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetail2.swift; sourceTree = "<group>"; };
 		F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarAlcoholicDetailReadMore.swift; sourceTree = "<group>"; };
 		F7FAAD642064F48F00A1916D /* MyBarAlcoholicItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarAlcoholicItems.swift; sourceTree = "<group>"; };
 		F7FAAD662064F7A600A1916D /* MyBarAlcoholicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarAlcoholicCell.swift; sourceTree = "<group>"; };
@@ -180,7 +192,7 @@
 				F75E0B1520C6E5BC00788F0F /* CG2.xcdatamodeld */,
 				F74E346620A9CA5F000098AE /* Constants.swift */,
 				F74E346820AA0E07000098AE /* CocktailList.swift */,
-				F795E4C620F00A77001FC697 /* CocktailDetail.swift */,
+				F795E4C620F00A77001FC697 /* CocktailDetail2.swift */,
 			);
 			path = CG2;
 			sourceTree = "<group>";
@@ -217,6 +229,12 @@
 				F7FAAD642064F48F00A1916D /* MyBarAlcoholicItems.swift */,
 				F7FAAD71206528AE00A1916D /* ProfileAlcoholicItems.swift */,
 				F7037ADA20ADE87400647472 /* MBADItems.swift */,
+				F75801902105076A0070009D /* CocktailDetail.swift */,
+				F7580192210507DC0070009D /* CocktailGlass.swift */,
+				F7580194210508150070009D /* CocktailMethod.swift */,
+				F7580196210509EA0070009D /* IngredientDetail.swift */,
+				F758019821050A6F0070009D /* IngredientType.swift */,
+				F758019A21050AE90070009D /* MyIngredient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,20 +431,24 @@
 				F7D472E020B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift in Sources */,
 				F771ED8D2063D21400C9C82A /* TableViewCellMyBarMyBar.swift in Sources */,
 				F73F08C920517ED600E769A5 /* SixthViewController.swift in Sources */,
-				F795E4C720F00A77001FC697 /* CocktailDetail.swift in Sources */,
+				F795E4C720F00A77001FC697 /* CocktailDetail2.swift in Sources */,
 				F7FAAD6C20651F4400A1916D /* BaseVCProfile.swift in Sources */,
+				F7580197210509EA0070009D /* IngredientDetail.swift in Sources */,
 				F771ED932063D23500C9C82A /* TableVCMyBarSuggestions.swift in Sources */,
 				F73F08CB20517F7C00E769A5 /* SeventhViewController.swift in Sources */,
 				F771ED8B2063D20C00C9C82A /* TableVCMyBarMyBar.swift in Sources */,
+				F7580195210508150070009D /* CocktailMethod.swift in Sources */,
 				F771ED8F2063D21F00C9C82A /* TableVCMyBarShoppingList.swift in Sources */,
 				F7FAAD6A20651F3200A1916D /* HeaderVCProfile.swift in Sources */,
 				F73F08C120517D9200E769A5 /* HeaderVCMyBar.swift in Sources */,
 				F7FAAD6E2065222500A1916D /* VCProfileIntro.swift in Sources */,
+				F75801912105076A0070009D /* CocktailDetail.swift in Sources */,
 				F78E49262052FE89009E838D /* BaseVCCocktails.swift in Sources */,
 				F771ED912063D22A00C9C82A /* TableViewCellMyBarShoppingList.swift in Sources */,
 				F78E491D2052C5A9009E838D /* TableViewControllerTwo.swift in Sources */,
 				F78E49212052C60C009E838D /* TableViewControllerThree.swift in Sources */,
 				F7037AD920ADE84200647472 /* MBADCell.swift in Sources */,
+				F758019B21050AE90070009D /* MyIngredient.swift in Sources */,
 				F7FAAD652064F48F00A1916D /* MyBarAlcoholicItems.swift in Sources */,
 				F78E49192052C231009E838D /* TableViewControllerOne.swift in Sources */,
 				F771ED852063C58700C9C82A /* TableVCMybarIntro.swift in Sources */,
@@ -437,6 +459,7 @@
 				F771ED9B2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift in Sources */,
 				F72C4DFC206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift in Sources */,
 				F78E491B2052C25D009E838D /* TableViewCellOne.swift in Sources */,
+				F758019921050A6F0070009D /* IngredientType.swift in Sources */,
 				F771ED7D2063AE0C00C9C82A /* BaseVCMyBar.swift in Sources */,
 				F771ED832063C55400C9C82A /* TableViewCellMyBarIntro.swift in Sources */,
 				F78E491F2052C5D0009E838D /* TableViewCellTwo.swift in Sources */,
@@ -452,6 +475,7 @@
 				F7FAAD672064F7A600A1916D /* MyBarAlcoholicCell.swift in Sources */,
 				F771ED952063D24100C9C82A /* TableViewCellMyBarSuggestions.swift in Sources */,
 				F771ED892063D1FE00C9C82A /* TableViewCellMyBarMyCocktails.swift in Sources */,
+				F7580193210507DC0070009D /* CocktailGlass.swift in Sources */,
 				F73F08C520517EAD00E769A5 /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

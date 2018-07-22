@@ -1,5 +1,5 @@
 //
-//  CocktailDetail.swift
+//  CocktailDetail2.swift
 //  CG2
 //
 //  Created by Tomáš Dobrotka on 06/07/2018.
@@ -10,7 +10,7 @@
 import UIKit
 import Alamofire
 
-class CocktailDetail{
+class CocktailDetail2{
     var _id : Int!
     var _name : String!
     var _image : String!
