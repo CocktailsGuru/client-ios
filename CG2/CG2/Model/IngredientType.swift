@@ -8,6 +8,29 @@
 
 import Foundation
 
+class IngredientType {
+    
+    private var _id: Int!
+    private var _name: String!
+    
+    var id: Int{
+        return _id
+    }
+    
+    var name: String{
+        return _name
+    }
+    
+    init(id: Int, name: String){
+        self._id = id
+        self._name = name
+    }
+    
+}
+
+
+
+
 //data class IngredientType(
 //val id: Int,
 //val name: String
