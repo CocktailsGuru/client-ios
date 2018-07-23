@@ -154,6 +154,19 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
         parseAlcoholic(alcoArr: alcoArr)
 
         
+        
+        
+        // SERVER DATA
+        
+        
+        IngredientService.instance.findAllIngredients { (success) in
+            
+        }
+        
+        
+        
+        
+        
    
     }
     
@@ -189,6 +202,17 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
             cell.layer.masksToBounds = false;
             cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
             
+            
+            
+//
+//            let ingredientDetailMyBarStruct = IngredientService.instance.ingredientDetailMyBarStructs[indexPath.row]
+//            cell.configureCell(ingredientDetailMyBarStruct: ingredientDetailMyBarStruct)
+//            return cell
+//        } else {
+//            return UICollectionViewCell()
+//        }
+            
+        
             let alco = MyBarAlcoholicStructsArr[indexPath.row]
             cell.configureCell(myBarAlcoholicItem: alco)
             return cell

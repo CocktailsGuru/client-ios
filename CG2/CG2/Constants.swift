@@ -26,6 +26,9 @@ let BASE_URL = "https://www.footyapps.com/cocktail/list?pageNumber=0&pageSize=10
 
 typealias  DownloadComplete = () -> ()
 
+typealias CompletionHandler = (_ Success: Bool) -> ()
+
+
 //{{method}}://{{host}}/cocktail/list?pageNumber=0&pageSize=100
 
 //https://46.101.103.73:8443/cocktail/list?pageNumber=0&pageSize=100
@@ -47,3 +50,8 @@ let COCKTAILLISTURL = "\(BASE)/\(COCKTAIL)/\(LIST)\(PAGENUMBER)0&\(PAGESIZE)10"
 //let IMG4 = "4.jpg"
 //let ASSETSINGREDIENTIMG = "\(BASE_URL)assets/ingred/thumb_300/\(IMG4)"
 let ASSETSINGREDIENTIMG = "https://www.footyapps.com/assets/ingred/thumb_300/4.jpg"
+
+
+
+//ingredient list
+let URL_GET_INGREDIENTLIST = "\(BASE)/ingredient/list?pageNumber=0&pageSize=50"

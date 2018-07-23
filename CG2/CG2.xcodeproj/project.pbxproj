@@ -30,6 +30,8 @@
 		F7580197210509EA0070009D /* IngredientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7580196210509EA0070009D /* IngredientDetail.swift */; };
 		F758019921050A6F0070009D /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758019821050A6F0070009D /* IngredientType.swift */; };
 		F758019B21050AE90070009D /* MyIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758019A21050AE90070009D /* MyIngredient.swift */; };
+		F75801B72105D6A60070009D /* IngredientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75801B62105D6A60070009D /* IngredientService.swift */; };
+		F75801B92105D7A00070009D /* IngredientDetailMyBarStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75801B82105D7A00070009D /* IngredientDetailMyBarStruct.swift */; };
 		F75E0B1720C6E5BC00788F0F /* CG2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75E0B1520C6E5BC00788F0F /* CG2.xcdatamodeld */; };
 		F771ED7D2063AE0C00C9C82A /* BaseVCMyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */; };
 		F771ED832063C55400C9C82A /* TableViewCellMyBarIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */; };
@@ -92,6 +94,8 @@
 		F7580196210509EA0070009D /* IngredientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetail.swift; sourceTree = "<group>"; };
 		F758019821050A6F0070009D /* IngredientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientType.swift; sourceTree = "<group>"; };
 		F758019A21050AE90070009D /* MyIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredient.swift; sourceTree = "<group>"; };
+		F75801B62105D6A60070009D /* IngredientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientService.swift; sourceTree = "<group>"; };
+		F75801B82105D7A00070009D /* IngredientDetailMyBarStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailMyBarStruct.swift; sourceTree = "<group>"; };
 		F75E0B1620C6E5BC00788F0F /* CG2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CG2.xcdatamodel; sourceTree = "<group>"; };
 		F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCMyBar.swift; sourceTree = "<group>"; };
 		F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarIntro.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			children = (
 				F75E0B1920C91EB700788F0F /* Extensions */,
 				F75E0B1820C91EAE00788F0F /* Enums */,
+				F75801B52105D67C0070009D /* Services */,
 				F73F08BC205170B400E769A5 /* Model */,
 				F73F08BB205170AB00E769A5 /* View */,
 				F73F08B92051709200E769A5 /* Controller */,
@@ -233,10 +238,19 @@
 				F7580192210507DC0070009D /* CocktailGlass.swift */,
 				F7580194210508150070009D /* CocktailMethod.swift */,
 				F7580196210509EA0070009D /* IngredientDetail.swift */,
+				F75801B82105D7A00070009D /* IngredientDetailMyBarStruct.swift */,
 				F758019821050A6F0070009D /* IngredientType.swift */,
 				F758019A21050AE90070009D /* MyIngredient.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F75801B52105D67C0070009D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F75801B62105D6A60070009D /* IngredientService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F75E0B1820C91EAE00788F0F /* Enums */ = {
@@ -389,11 +403,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CG2/Pods-CG2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75801B72105D6A60070009D /* IngredientService.swift in Sources */,
 				F75E0B1720C6E5BC00788F0F /* CG2.xcdatamodeld in Sources */,
 				F73F08C720517EC100E769A5 /* FifthViewController.swift in Sources */,
 				F7D472E020B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift in Sources */,
@@ -468,6 +485,7 @@
 				F771ED9D2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift in Sources */,
 				F7037ADB20ADE87400647472 /* MBADItems.swift in Sources */,
 				F72C4E00206D98320051946A /* VCMyBarAlcoholicDetail.swift in Sources */,
+				F75801B92105D7A00070009D /* IngredientDetailMyBarStruct.swift in Sources */,
 				F78E4937205845E7009E838D /* HeaderVCCocktails.swift in Sources */,
 				F78E49232052C621009E838D /* TableViewCellThree.swift in Sources */,
 				F771ED872063D1EA00C9C82A /* TableVCMyBarMyCocktails.swift in Sources */,
@@ -624,10 +642,7 @@
 				DEVELOPMENT_TEAM = A92DW6C75Q;
 				INFOPLIST_FILE = CG2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tom.CG2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -644,10 +659,7 @@
 				DEVELOPMENT_TEAM = A92DW6C75Q;
 				INFOPLIST_FILE = CG2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tom.CG2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
