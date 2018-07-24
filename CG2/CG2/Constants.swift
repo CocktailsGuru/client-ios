@@ -54,4 +54,4 @@ let ASSETSINGREDIENTIMG = "https://www.footyapps.com/assets/ingred/thumb_300/4.j
 
 
 //ingredient list
-let URL_GET_INGREDIENTLIST = "\(BASE)/ingredient/list?pageNumber=0&pageSize=50"
+let URL_GET_INGREDIENTLIST = "\(BASE)/ingredient/list?pageNumber=0&pageSize=150"

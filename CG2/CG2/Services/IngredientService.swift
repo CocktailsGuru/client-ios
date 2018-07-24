@@ -20,8 +20,8 @@ class IngredientService {
     
     func findAllIngredients(completion: @escaping CompletionHandler) {
         //passwords, usernames, login
-        let user = "android"
-        let password = "123Android32-Pass12"
+        let user = "=="
+        let password = "=="
         let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
@@ -32,7 +32,7 @@ class IngredientService {
             
             guard let json = response.result.value as? Dictionary<String, AnyObject> else { return }
             
-            print(json)
+  //          print(json)
             let ingrDict = json["list"] as! Array<NSDictionary>
             for item in ingrDict {
 //                print(item.kind)
@@ -60,8 +60,9 @@ class IngredientService {
                 
             
             }
+         //   print(self.ingredientDetailMyBarStructs.count)
 //            print("LLLLL",ingrDict)
-            print("LLLLL",self.ingredientDetailMyBarStructs)
+           // print("LLLLL",self.ingredientDetailMyBarStructs)
             
       //      print(self.ingredientDetailMyBarStructs[4].name!)
             

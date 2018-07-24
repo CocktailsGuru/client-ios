@@ -193,6 +193,7 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
     //settings for collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBarAlcoholicCell", for: indexPath) as? MyBarAlcoholicCell {
+            print("#############################################")
             
             //items shadows
             cell.layer.shadowColor = UIColor.darkGray.cgColor

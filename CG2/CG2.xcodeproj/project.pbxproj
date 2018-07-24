@@ -32,6 +32,7 @@
 		F758019B21050AE90070009D /* MyIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758019A21050AE90070009D /* MyIngredient.swift */; };
 		F75801B72105D6A60070009D /* IngredientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75801B62105D6A60070009D /* IngredientService.swift */; };
 		F75801B92105D7A00070009D /* IngredientDetailMyBarStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75801B82105D7A00070009D /* IngredientDetailMyBarStruct.swift */; };
+		F75801BB21070FB40070009D /* MyBarNonAlcoholicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75801BA21070FB40070009D /* MyBarNonAlcoholicCell.swift */; };
 		F75E0B1720C6E5BC00788F0F /* CG2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F75E0B1520C6E5BC00788F0F /* CG2.xcdatamodeld */; };
 		F771ED7D2063AE0C00C9C82A /* BaseVCMyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */; };
 		F771ED832063C55400C9C82A /* TableViewCellMyBarIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */; };
@@ -45,7 +46,7 @@
 		F771ED932063D23500C9C82A /* TableVCMyBarSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED922063D23500C9C82A /* TableVCMyBarSuggestions.swift */; };
 		F771ED952063D24100C9C82A /* TableViewCellMyBarSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED942063D24000C9C82A /* TableViewCellMyBarSuggestions.swift */; };
 		F771ED972063D24F00C9C82A /* VCMyBarAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED962063D24F00C9C82A /* VCMyBarAlcoholic.swift */; };
-		F771ED9B2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED9A2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift */; };
+		F771ED9B2063D26300C9C82A /* VCMyBarNonAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED9A2063D26300C9C82A /* VCMyBarNonAlcoholic.swift */; };
 		F771ED9D2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */; };
 		F78E49192052C231009E838D /* TableViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49182052C231009E838D /* TableViewControllerOne.swift */; };
 		F78E491B2052C25D009E838D /* TableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E491A2052C25D009E838D /* TableViewCellOne.swift */; };
@@ -96,6 +97,7 @@
 		F758019A21050AE90070009D /* MyIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredient.swift; sourceTree = "<group>"; };
 		F75801B62105D6A60070009D /* IngredientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientService.swift; sourceTree = "<group>"; };
 		F75801B82105D7A00070009D /* IngredientDetailMyBarStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailMyBarStruct.swift; sourceTree = "<group>"; };
+		F75801BA21070FB40070009D /* MyBarNonAlcoholicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarNonAlcoholicCell.swift; sourceTree = "<group>"; };
 		F75E0B1620C6E5BC00788F0F /* CG2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CG2.xcdatamodel; sourceTree = "<group>"; };
 		F771ED7C2063AE0C00C9C82A /* BaseVCMyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCMyBar.swift; sourceTree = "<group>"; };
 		F771ED822063C55400C9C82A /* TableViewCellMyBarIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarIntro.swift; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 		F771ED922063D23500C9C82A /* TableVCMyBarSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVCMyBarSuggestions.swift; sourceTree = "<group>"; };
 		F771ED942063D24000C9C82A /* TableViewCellMyBarSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarSuggestions.swift; sourceTree = "<group>"; };
 		F771ED962063D24F00C9C82A /* VCMyBarAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarAlcoholic.swift; sourceTree = "<group>"; };
-		F771ED9A2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVCMyBarNonAlcoholic.swift; sourceTree = "<group>"; };
+		F771ED9A2063D26300C9C82A /* VCMyBarNonAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarNonAlcoholic.swift; sourceTree = "<group>"; };
 		F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarNonAlcoholic.swift; sourceTree = "<group>"; };
 		F78E49182052C231009E838D /* TableViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerOne.swift; sourceTree = "<group>"; };
 		F78E491A2052C25D009E838D /* TableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOne.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				F7FAAD662064F7A600A1916D /* MyBarAlcoholicCell.swift */,
+				F75801BA21070FB40070009D /* MyBarNonAlcoholicCell.swift */,
 				F7FAAD73206528C100A1916D /* ProfileAlcoholicCell.swift */,
 				F7037AD820ADE84200647472 /* MBADCell.swift */,
 				F771ED8C2063D21400C9C82A /* TableViewCellMyBarMyBar.swift */,
@@ -299,7 +302,7 @@
 				F72C4DFB206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift */,
 				F72C4DFF206D98320051946A /* VCMyBarAlcoholicDetail.swift */,
 				F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */,
-				F771ED9A2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift */,
+				F771ED9A2063D26300C9C82A /* VCMyBarNonAlcoholic.swift */,
 				F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */,
 			);
 			path = MyBar;
@@ -473,7 +476,7 @@
 				F771ED972063D24F00C9C82A /* VCMyBarAlcoholic.swift in Sources */,
 				F74E346720A9CA5F000098AE /* Constants.swift in Sources */,
 				F73F08A82051708800E769A5 /* AppDelegate.swift in Sources */,
-				F771ED9B2063D26300C9C82A /* TableVCMyBarNonAlcoholic.swift in Sources */,
+				F771ED9B2063D26300C9C82A /* VCMyBarNonAlcoholic.swift in Sources */,
 				F72C4DFC206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift in Sources */,
 				F78E491B2052C25D009E838D /* TableViewCellOne.swift in Sources */,
 				F758019921050A6F0070009D /* IngredientType.swift in Sources */,
@@ -482,6 +485,7 @@
 				F78E491F2052C5D0009E838D /* TableViewCellTwo.swift in Sources */,
 				F7FAAD74206528C100A1916D /* ProfileAlcoholicCell.swift in Sources */,
 				F7FAAD702065252C00A1916D /* VCProfileAlcoholic.swift in Sources */,
+				F75801BB21070FB40070009D /* MyBarNonAlcoholicCell.swift in Sources */,
 				F771ED9D2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift in Sources */,
 				F7037ADB20ADE87400647472 /* MBADItems.swift in Sources */,
 				F72C4E00206D98320051946A /* VCMyBarAlcoholicDetail.swift in Sources */,
@@ -642,7 +646,10 @@
 				DEVELOPMENT_TEAM = A92DW6C75Q;
 				INFOPLIST_FILE = CG2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = tom.CG2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -659,7 +666,10 @@
 				DEVELOPMENT_TEAM = A92DW6C75Q;
 				INFOPLIST_FILE = CG2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = tom.CG2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
