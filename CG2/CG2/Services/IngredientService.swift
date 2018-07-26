@@ -27,7 +27,7 @@ class IngredientService {
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
         
-        Alamofire.request(URL_GET_INGREDIENTLIST, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseJSON { (response) in
+        Alamofire.request(FULL_URL_INGREDIENTLIST_NON_ALCO, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseJSON { (response) in
             
             
             guard let json = response.result.value as? Dictionary<String, AnyObject> else { return }
@@ -41,7 +41,8 @@ class IngredientService {
                 let id = item["id"] as! Int
 
                 var name = item["nameGrouped"] as! String
-                let imageName : String! = item["imageName"] as! String
+                var imageName : String! = item["imageName"] as! String
+//                print(imageName)
                 var voltage = item["voltage"] as! String
                 //voltage = voltage.toInt
 //                print("OOOO",voltage.debugDescription)
@@ -50,7 +51,6 @@ class IngredientService {
               //  print("OOOO",voltage)
                
                 
-               // let ingredientDetailMyBarStruct = IngredientDetailMyBarStruct(id: id as! Int, name: name as! String, imageName: imageName as! String, voltage: voltage as! Double)
                 
                 let ingredientDetailMyBarStruct = IngredientDetailMyBarStruct(id: id , name: name, imageName: imageName , voltage: voltage)
 //                print("PPPP",id)

@@ -72,11 +72,15 @@ class MyBarNonAlcoholicCell: UICollectionViewCell {
         
         let nameText = ingredientDetailMyBarStruct.name ?? ""
         nameLbl.text = nameText.capitalized
+        let imgText = ingredientDetailMyBarStruct.imageName ?? "1.jpg"
+        print(imgText)
+        print("\(INGREDIENTIMG)\(imgText)")
+        //idImg.image = UIImage(named: "\(INGREDIENTIMG)\(imgText)")      //it will be good, after downloading images to device...maybe
+        //idImg.image = UIImage(named: "\(imgText)")
+        idImg.image = UIImage(named: "\(imgText)")
         
-        idImg.image = UIImage(named: "2")
-        
-        print("IMAGE: ",idImg)
-        print("TEXT: ",nameText.capitalized)
+    //    print("IMAGE: ",idImg)
+    //    print("TEXT: ",nameText.capitalized)
         
         
         

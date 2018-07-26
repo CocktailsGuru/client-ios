@@ -50,8 +50,17 @@ let COCKTAILLISTURL = "\(BASE)/\(COCKTAIL)/\(LIST)\(PAGENUMBER)0&\(PAGESIZE)10"
 //let IMG4 = "4.jpg"
 //let ASSETSINGREDIENTIMG = "\(BASE_URL)assets/ingred/thumb_300/\(IMG4)"
 let ASSETSINGREDIENTIMG = "https://www.footyapps.com/assets/ingred/thumb_300/4.jpg"
+let INGREDIENTIMG = "\(BASE)/assets/ingred/thumb_300/"  //name of the img needed
 
 
 
 //ingredient list
-let URL_GET_INGREDIENTLIST = "\(BASE)/ingredient/list?pageNumber=0&pageSize=150"
+let URL_INGREDIENTLIST = "/ingredient/list"       //    "https://www.footyapps.com/ingredient/list?pageNumber=0&pageSize=150&ingredientType=NON_ALCO"
+let INGREDIENTLIST_PAGENUMBER = "?pageNumber="
+let INGREDIENTLIST_PAGESIZE = "&pageSize="
+let INGREDIENTLIST_ALCO = "&ingredientType=ALCO"
+let INGREDIENTLIST_NON_ALCO = "&ingredientType=NON_ALCO"
+
+let FULL_URL_INGREDIENTLIST_ALCO = "\(BASE)\(URL_INGREDIENTLIST)\(INGREDIENTLIST_PAGENUMBER)0\(INGREDIENTLIST_PAGESIZE)150\(INGREDIENTLIST_ALCO)"
+let FULL_URL_INGREDIENTLIST_NON_ALCO = "\(BASE)\(URL_INGREDIENTLIST)\(INGREDIENTLIST_PAGENUMBER)0\(INGREDIENTLIST_PAGESIZE)150\(INGREDIENTLIST_NON_ALCO)"
+

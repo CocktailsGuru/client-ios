@@ -25,10 +25,10 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         // SERVER DATA
         IngredientService.instance.findAllIngredients { (success) in
-            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-            print(IngredientService.instance.ingredientDetailMyBarStructs.count)
+ //           print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+ //           print(IngredientService.instance.ingredientDetailMyBarStructs.count)
             self.ingredientDetailMyBarStructs = IngredientService.instance.ingredientDetailMyBarStructs
-            print(self.ingredientDetailMyBarStructs.count,"KKKKK")
+//            print(self.ingredientDetailMyBarStructs.count,"KKKKK")
             if success {
                 self.collection.reloadData()
             }else{
@@ -36,7 +36,7 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
             }
         }
         super.viewDidLoad()
-        print("dd")
+//        print("dd")
         
         
         collection.dataSource = self
@@ -86,7 +86,7 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
         //settings for collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBarNonAlcoholicCell", for: indexPath) as? MyBarNonAlcoholicCell {
-             print("cell For Item At")
+ //            print("cell For Item At")
 
             //items shadows
             cell.layer.shadowColor = UIColor.darkGray.cgColor
@@ -98,10 +98,10 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
 
 
 
-            print("SHIIIT")
+//            print("SHIIIT")
             i = i + 1
-            print(self.ingredientDetailMyBarStructs.count)
-            print(i)
+ //           print(self.ingredientDetailMyBarStructs.count)
+  //          print(i)
             if (self.ingredientDetailMyBarStructs.count > 0){
                             let ingredientDetailMyBarStruct = self.ingredientDetailMyBarStructs[indexPath.row]
                 
@@ -119,7 +119,7 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
 
 
             } else {
-                print("dddd")
+   //             print("dddd")
                 return UICollectionViewCell()
             }
 
