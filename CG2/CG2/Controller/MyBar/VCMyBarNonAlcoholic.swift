@@ -17,17 +17,17 @@ import XLPagerTabStrip
 
 class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
    
-    var ingredientDetailMyBarStructs = [IngredientDetailMyBarStruct]()
+    var ingredientNonAlcoDetailMyBarStructs = [IngredientDetailMyBarStruct]()
     
 
     @IBOutlet weak var collection: UICollectionView!
     
     override func viewDidLoad() {
         // SERVER DATA
-        IngredientService.instance.findAllIngredients { (success) in
+        IngredientService.instance.findAllNonAlcoIngredients { (success) in
  //           print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
  //           print(IngredientService.instance.ingredientDetailMyBarStructs.count)
-            self.ingredientDetailMyBarStructs = IngredientService.instance.ingredientDetailMyBarStructs
+            self.ingredientNonAlcoDetailMyBarStructs = IngredientService.instance.ingredientNonAlcoDetailMyBarStructs
 //            print(self.ingredientDetailMyBarStructs.count,"KKKKK")
             if success {
                 self.collection.reloadData()
@@ -102,52 +102,43 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
             i = i + 1
  //           print(self.ingredientDetailMyBarStructs.count)
   //          print(i)
-            if (self.ingredientDetailMyBarStructs.count > 0){
-                            let ingredientDetailMyBarStruct = self.ingredientDetailMyBarStructs[indexPath.row]
+            if (self.ingredientNonAlcoDetailMyBarStructs.count > 0){
+                            let ingredientNonAlcoDetailMyBarStructs = self.ingredientNonAlcoDetailMyBarStructs[indexPath.row]
                 
                 
-                            cell.configureCell(ingredientDetailMyBarStruct: ingredientDetailMyBarStruct)
+                            cell.configureCell(ingredientNonAlcoDetailMyBarStructs: ingredientNonAlcoDetailMyBarStructs)
                 return cell
             }
             
             return cell
-            
 
-
-
-            
-
-
-            } else {
+        } else {
    //             print("dddd")
                 return UICollectionViewCell()
-            }
-
         }
+
+    }
     
     
-    
-    
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        var alco: MyBarAlcoholicItem!
-//        alco = MyBarAlcoholicStructsArr[indexPath.row]
-//
-//        performSegue(withIdentifier: "VCMyBarNonAlcoholicDetail", sender: alco)
-//    }
+    //TODO
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var nonAlco: IngredientDetailMyBarStruct!
+        nonAlco = ingredientNonAlcoDetailMyBarStructs[indexPath.row]
+
+        performSegue(withIdentifier: "VCMyBarNonAlcoholicDetail", sender: nonAlco)
+    }
 
     //number of sections(pod sebou)
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        print("num of section")
+        //print("num of section")
         return 1
     }
 
     //numer of all items in one section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("number Of Items In Section")
-        print(self.ingredientDetailMyBarStructs.count)
-        return self.ingredientDetailMyBarStructs.count
+        //print("number Of Items In Section")
+        //print(self.ingredientNonAlcoDetailMyBarStructs.count)
+        return self.ingredientNonAlcoDetailMyBarStructs.count
     }
 
 
@@ -160,16 +151,18 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
         return CGSize(width: widthPerItem, height: heightPerItem)       // height:260 - ok
     }
     
-//    //segue-passing data
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vCMyBarAlcoholicDetail = segue.destination as? VCMyBarAlcoholicDetail{
-//
-//            if let myBarAlcoholicItemm = sender as? MyBarAlcoholicItem {
-//                vCMyBarAlcoholicDetail.myBarAlcoholicItem = myBarAlcoholicItemm
-//                //print(myBarAlcoholicItemm.rating)
-//            }
-//        }
-//    }
+    
+    
+    //segue-passing data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vCMyBarNonAlcoholicDetail = segue.destination as? VCMyBarNonAlcoholicDetail{
+
+            if let ingredientDetailMyBarStruct = sender as? IngredientDetailMyBarStruct {
+                vCMyBarNonAlcoholicDetail.ingredientDetailMyBarStruct = ingredientDetailMyBarStruct
+                //print(myBarAlcoholicItemm.rating)
+            }
+        }
+    }
     
 }
 

@@ -38,93 +38,24 @@ class MyBarNonAlcoholicCell: UICollectionViewCell {
 //        }
 //        lastTag2 = tag
 //    }
-    
-    
-    
-    
-    
+
     
     //@IBOutlet weak var ratingLbl : UILabel!
     
-    
-    
-    
-    
-//    var myBarAlcoholicItem : MyBarAlcoholicItem!
- //   var ingredientDetailMyBarStruct : IngredientDetailMyBarStruct!
-    
-    
-    
-    
-//    func configureCell( myBarAlcoholicItem: MyBarAlcoholicItem) {
-//
-//        self.myBarAlcoholicItem = myBarAlcoholicItem
-//        idImg.image = UIImage(named: self.myBarAlcoholicItem.image)
-//        nameLbl.text = self.myBarAlcoholicItem.name.capitalized
-    
-    func configureCell( ingredientDetailMyBarStruct: IngredientDetailMyBarStruct) {
-        
-        //self.ingredientDetailMyBarStruct = ingredientDetailMyBarStruct
-                //   idImg.image = UIImage(named: "2")
-                //   nameLbl.text = "what"
-                // print(self.myBarAlcoholicItem.image)
-                //  idImg.image = UIImage(named: self.mBADItem.image)
-        
-        let nameText = ingredientDetailMyBarStruct.name ?? ""
+    func configureCell( ingredientNonAlcoDetailMyBarStructs: IngredientDetailMyBarStruct) {
+
+        let nameText = ingredientNonAlcoDetailMyBarStructs.name ?? ""
         nameLbl.text = nameText.capitalized
-        let imgText = ingredientDetailMyBarStruct.imageName ?? "1.jpg"
-        print(imgText)
-        print("\(INGREDIENTIMG)\(imgText)")
+        let imgText = ingredientNonAlcoDetailMyBarStructs.imageName ?? "1.jpg"
+        idImg.image = UIImage(named: "\(imgText)")
+        //print(imgText)
+        //print("\(INGREDIENTIMG)\(imgText)")
         //idImg.image = UIImage(named: "\(INGREDIENTIMG)\(imgText)")      //it will be good, after downloading images to device...maybe
         //idImg.image = UIImage(named: "\(imgText)")
-        idImg.image = UIImage(named: "\(imgText)")
         
-    //    print("IMAGE: ",idImg)
-    //    print("TEXT: ",nameText.capitalized)
-        
-        
-        
-        
-        
-
-            }
-    
-    
-
     }
     
     
-    //    var ingredientDetailMyBarStruct : IngredientDetailMyBarStruct!
-    //
-    //    func configureCell( ingredientDetailMyBarStruct: IngredientDetailMyBarStruct) {
-    //        print("latat")
-    ////        self.ingredientDetailMyBarStruct = ingredientDetailMyBarStruct
-    //        //   idImg.image = UIImage(named: "2")
-    //        //   nameLbl.text = "what"
-    //        // print(self.myBarAlcoholicItem.image)
-    //        //  idImg.image = UIImage(named: self.mBADItem.image)
-    //        nameLbl.text = ingredientDetailMyBarStruct.name.capitalized
-    //        //      var tag = self.mBADItem.rating
-    //        // let tag = 2
-    //
-    //        //            if (tag == 1 ) && (lastTag2 != 0){      //maybe it's good
-    //        //                tag = 0
-    //        //                lastTag2 = 0
-    //        //            }
-    //        //
-    //        //            for button in ratingStarBtns {
-    //        //                if button.tag <= tag {
-    //        //                    //selected
-    //        //                    button.setTitle("★", for: .normal)
-    //        //                }else {
-    //        //                    button.setTitle("☆", for: .normal)
-    //        //                }
-    //        //            }
-    //        //            lastTag2 = tag
-    //                }
-    //
-    
-    
-//}
 
+}
 

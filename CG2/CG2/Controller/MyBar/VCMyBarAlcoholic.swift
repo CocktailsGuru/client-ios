@@ -159,9 +159,9 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
         // SERVER DATA
         
         
-        IngredientService.instance.findAllIngredients { (success) in
-            
-        }
+//        IngredientService.instance.findAllIngredients { (success) in
+//            
+//        }
         
         
         
