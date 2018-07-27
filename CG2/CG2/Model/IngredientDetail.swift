@@ -13,12 +13,13 @@ class IngredientDetail {
     private var _id: Int!
     private var _name: String!
     private var _nameGrouped: String!
+    private var _voltage: String!
     private var _description: String!
     private var _imageName: String!
     private var _imageUrl: String!
     private var _numShowed: Int!
-    private var _ingredientType: IngredientType!
-    private var _voltage: Double!
+   // private var _ingredientType: IngredientType!
+   
 
     var id: Int{
         return _id
@@ -30,6 +31,10 @@ class IngredientDetail {
     
     var nameGrouped: String{
         return _nameGrouped
+    }
+    
+    var voltage: String{
+        return _voltage
     }
     
     var description: String{
@@ -47,21 +52,22 @@ class IngredientDetail {
         return _numShowed
     }
     
-    var ingredientType: IngredientType{
-        return _ingredientType
-    }
+//    var ingredientType: IngredientType{
+//        return _ingredientType
+//    }
     
-    var voltage: Double{
-        return _voltage
+
+    init(id: Int, name: String, nameGrouped: String, voltage: String, description: String, imageName: String, imageUrl: String, numShowed: Int) {  // , ingredientType: IngredientType
+        self._id = id
+        self._name = name
+        self._nameGrouped = nameGrouped
+        self._voltage = voltage
+        self._description = description
+        self._imageName = imageName
+        self._imageUrl = imageUrl
+        self._numShowed = numShowed
+  //      self._ingredientType = ingredientType
     }
-  
-    
-    //    init(id: Int, name: String, image: String, rating: Int) {
-    //        self._id = id
-    //        self._name = name
-    //        self._image = image
-    //        self._rating = rating
-    //    }
  
     
 }

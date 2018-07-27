@@ -1986,6 +1986,7 @@
                     <size key="freeformSize" width="414" height="1750"/>
                     <connections>
                         <outlet property="MBNADCollectionView" destination="Rzd-qM-nIr" id="bPm-bF-diq"/>
+                        <outlet property="VCMBNADDescription" destination="Iw4-cJ-Ucu" id="o0e-SQ-6Gh"/>
                         <outlet property="VCMBNADMainImage" destination="R61-kc-TMg" id="X5M-6M-5W2"/>
                         <outlet property="VCMBNADMyBarSwitch" destination="eAY-EE-9eW" id="FSa-oG-IRs"/>
                         <outlet property="VCMBNADScrollView" destination="kN3-B9-k5r" id="K9F-ze-r3g"/>

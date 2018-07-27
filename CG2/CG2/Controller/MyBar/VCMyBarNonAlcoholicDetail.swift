@@ -20,7 +20,8 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
         
     }
 
-
+    @IBOutlet weak var VCMBNADDescription: UILabel!
+    
     @IBOutlet weak var VCMBNADMainImage: UIImageView!
     
     @IBOutlet weak var VCMBNADScrollView: UIScrollView!
@@ -73,8 +74,9 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
 
 
     var imgName : String! = ""
-
+    var itemId : Int!
     var ingredientDetailMyBarStruct: IngredientDetailMyBarStruct!
+    var ingredientDetail: IngredientDetail!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +96,24 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
         self.title = ingredientDetailMyBarStruct.name
         self.VCMBNADMainImage.image = UIImage(named: "\(ingredientDetailMyBarStruct.imageName)")
         self.imgName = ingredientDetailMyBarStruct.imageName
+        self.itemId = ingredientDetailMyBarStruct.id
+        
+        
+        IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
+
+            self.ingredientDetail = IngredientService.instance.ingredientAllDetail
+            print(self.ingredientDetail.description)
+            
+            
+            if success {
+//                self.collection.reloadData()
+                 self.VCMBNADDescription.text = self.ingredientDetail.description
+            }else{
+                print("not success")
+            }
+        }
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

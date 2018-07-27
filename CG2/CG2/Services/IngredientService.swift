@@ -16,6 +16,8 @@ class IngredientService {
     
     var ingredientNonAlcoDetailMyBarStructs = [IngredientDetailMyBarStruct]()
     var ingredientAlcoDetailMyBarStructs = [IngredientDetailMyBarStruct]()
+    var ingredientAllDetail : IngredientDetail!
+    //var ingredientAllDetail : IngredientDetail!
     
     
 //    NON_ALCO INGREDIENTS
@@ -77,6 +79,44 @@ class IngredientService {
                 self.ingredientAlcoDetailMyBarStructs.append(ingredientAlcoDetailMyBarStructs)
                 
             }
+            completion(true)
+        }
+    }
+    
+    
+    //    DETAIL INGREDIENTS
+    func findDetailIngredients(ingredientId: Int ,completion: @escaping CompletionHandler) {
+        
+        //passwords, usernames, login
+        let user = "=="
+        let password = "=="
+        let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        let DETAIL_URL : String = "\(INGREDIENT_DETAIL_BASE)\(ingredientId)"
+        
+        Alamofire.request(DETAIL_URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseJSON { (response) in
+            
+            guard let json = response.result.value as? Dictionary<String, AnyObject> else { return }
+            
+            let ingr = json["ingredient"] as! Dictionary<String, AnyObject>
+            
+            let id = ingr["id"] as! Int
+            let name = ingr["name"] as! String
+            let nameGrouped = ingr["nameGrouped"] as! String
+            let voltage = ingr["voltage"] as! String
+            let description = ingr["description"] as! String
+            let imageName : String! = ingr["imageName"] as! String
+            let imageNameString = imageName!    //help variable
+            let imageUrl = "\(BASE)/assets/ingred/full/\(imageNameString)"
+            let numShowed = ingr["numShowed"] as! Int
+            //let ingredientType = ingr["ingredientType"] as! IngredientType
+            
+            self.ingredientAllDetail = IngredientDetail(id: id , name: name, nameGrouped: nameGrouped, voltage: voltage, description: description, imageName: imageName, imageUrl: imageUrl, numShowed: numShowed) //, ingredientType: ingredientType
+                
+            print(self.ingredientAllDetail.imageUrl, self.ingredientAllDetail.description, self.ingredientAllDetail.name)
+
             completion(true)
         }
     }
