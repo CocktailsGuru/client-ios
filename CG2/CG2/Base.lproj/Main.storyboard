@@ -1047,9 +1047,6 @@
                                                                     <state key="normal" title="☆">
                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="ratingStarBtnTapped:" destination="iy6-3u-f5Y" eventType="touchUpInside" id="5pK-HZ-Hfo"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oU-UO-MCW">
                                                                     <rect key="frame" x="30" y="0.66666666666668561" width="30" height="32"/>
@@ -1057,9 +1054,6 @@
                                                                     <state key="normal" title="☆">
                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="ratingStarBtnTapped:" destination="iy6-3u-f5Y" eventType="touchUpInside" id="gcr-PH-2xj"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-cg-G8o">
                                                                     <rect key="frame" x="60" y="0.66666666666668561" width="30" height="32"/>
@@ -1067,9 +1061,6 @@
                                                                     <state key="normal" title="☆">
                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="ratingStarBtnTapped:" destination="iy6-3u-f5Y" eventType="touchUpInside" id="lsV-OQ-qnq"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-Hj-P97">
                                                                     <rect key="frame" x="90" y="0.66666666666668561" width="30" height="32"/>
@@ -1077,9 +1068,6 @@
                                                                     <state key="normal" title="☆">
                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="ratingStarBtnTapped:" destination="iy6-3u-f5Y" eventType="touchUpInside" id="GBt-aT-fMR"/>
-                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="234-OJ-vMM">
                                                                     <rect key="frame" x="120" y="0.66666666666668561" width="30" height="32"/>
@@ -1087,9 +1075,6 @@
                                                                     <state key="normal" title="☆">
                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
-                                                                    <connections>
-                                                                        <action selector="ratingStarBtnTapped:" destination="iy6-3u-f5Y" eventType="touchUpInside" id="02I-A4-XId"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -1301,9 +1286,6 @@
                                                                                     <state key="normal" title="☆">
                                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </state>
-                                                                                    <connections>
-                                                                                        <action selector="ratingStarBtnTapped:" destination="GvP-Z5-tMH" eventType="touchUpInside" id="xtc-rn-jcC"/>
-                                                                                    </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seZ-ii-Wsv">
                                                                                     <rect key="frame" x="30" y="0.66666666666668561" width="30" height="32"/>
@@ -1311,9 +1293,6 @@
                                                                                     <state key="normal" title="☆">
                                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </state>
-                                                                                    <connections>
-                                                                                        <action selector="ratingStarBtnTapped:" destination="GvP-Z5-tMH" eventType="touchUpInside" id="DHM-Lz-qSt"/>
-                                                                                    </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4o-gE-riN">
                                                                                     <rect key="frame" x="60" y="0.66666666666668561" width="30" height="32"/>
@@ -1321,9 +1300,6 @@
                                                                                     <state key="normal" title="☆">
                                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </state>
-                                                                                    <connections>
-                                                                                        <action selector="ratingStarBtnTapped:" destination="GvP-Z5-tMH" eventType="touchUpInside" id="oEm-nP-Fts"/>
-                                                                                    </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuD-KD-fKt">
                                                                                     <rect key="frame" x="90" y="0.66666666666668561" width="30" height="32"/>
@@ -1331,9 +1307,6 @@
                                                                                     <state key="normal" title="☆">
                                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </state>
-                                                                                    <connections>
-                                                                                        <action selector="ratingStarBtnTapped:" destination="GvP-Z5-tMH" eventType="touchUpInside" id="t6N-OZ-OB5"/>
-                                                                                    </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBT-Vy-UiI">
                                                                                     <rect key="frame" x="120" y="0.66666666666668561" width="30" height="32"/>
@@ -1341,9 +1314,6 @@
                                                                                     <state key="normal" title="☆">
                                                                                         <color key="titleColor" red="0.1268855035" green="0.58810228109999996" blue="0.95351511239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     </state>
-                                                                                    <connections>
-                                                                                        <action selector="ratingStarBtnTapped:" destination="GvP-Z5-tMH" eventType="touchUpInside" id="pzQ-uS-lLJ"/>
-                                                                                    </connections>
                                                                                 </button>
                                                                             </subviews>
                                                                         </stackView>
@@ -1361,11 +1331,6 @@
                                                         <connections>
                                                             <outlet property="idImg" destination="6uA-Cv-DNu" id="A3h-RJ-9AG"/>
                                                             <outlet property="nameLbl" destination="SLl-nY-YlU" id="GxV-qh-O9S"/>
-                                                            <outletCollection property="ratingStarBtns" destination="zMC-Da-noU" collectionClass="NSMutableArray" id="gLP-CD-e3S"/>
-                                                            <outletCollection property="ratingStarBtns" destination="seZ-ii-Wsv" collectionClass="NSMutableArray" id="uAj-M6-OpY"/>
-                                                            <outletCollection property="ratingStarBtns" destination="N4o-gE-riN" collectionClass="NSMutableArray" id="scl-kr-g1c"/>
-                                                            <outletCollection property="ratingStarBtns" destination="zuD-KD-fKt" collectionClass="NSMutableArray" id="sef-ld-afb"/>
-                                                            <outletCollection property="ratingStarBtns" destination="gBT-Vy-UiI" collectionClass="NSMutableArray" id="eea-as-bKm"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -1422,6 +1387,7 @@
                     <size key="freeformSize" width="414" height="1750"/>
                     <connections>
                         <outlet property="MBADCollectionView" destination="uH8-mE-044" id="lvG-nW-QR4"/>
+                        <outlet property="VCMBADDescription" destination="cNj-5m-aIt" id="Trg-uJ-1Uz"/>
                         <outlet property="VCMBADMainImage" destination="bKy-If-WIp" id="LHJ-Ax-pHG"/>
                         <outlet property="VCMBADMyBarSwitch" destination="CwH-HU-1MQ" id="aMJ-JR-BeA"/>
                         <outlet property="VCMBADScrollView" destination="Fyy-Fa-Rti" id="7eo-vM-zRr"/>

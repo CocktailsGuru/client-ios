@@ -120,7 +120,6 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     
-    //TODO
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var nonAlco: IngredientDetailMyBarStruct!
         nonAlco = ingredientNonAlcoDetailMyBarStructs[indexPath.row]
@@ -134,7 +133,7 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
         return 1
     }
 
-    //numer of all items in one section
+    //number of all items in one section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //print("number Of Items In Section")
         //print(self.ingredientNonAlcoDetailMyBarStructs.count)
