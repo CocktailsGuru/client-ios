@@ -12,10 +12,11 @@ import CoreData
 
 let appDelegateSL = UIApplication.shared.delegate as? AppDelegate
 
+var myBarShoppingListItems: [MyBarShoppingListItem] = []
 
 class TableVCMyBarShoppingList: UITableViewController {
     
-    var myBarShoppingListItems: [MyBarShoppingListItem] = []
+    
 //
 //    @IBAction func myBarShoppingListItemSwitch(_ sender: UISwitch) {
 //

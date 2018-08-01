@@ -12,9 +12,9 @@ import CoreData
 
 let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
+var myBarMyBarItems: [MyBarMyBarItem] = []
+
 class TableVCMyBarMyBar: UITableViewController {
-    
-    var myBarMyBarItems: [MyBarMyBarItem] = []
     
     @IBAction func myBarMyBarItemSwitch(_ sender: UISwitch) {
         //print("BTN WAS PRESSEDDDDDDDD")

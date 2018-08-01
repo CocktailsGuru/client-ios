@@ -26,8 +26,9 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var VCMBADMyBarSwitch: UISwitch!
     @IBOutlet weak var VCMBADShoppingListSwitch: UISwitch!
     
-    var myBarMyBarItems: [MyBarMyBarItem] = []
-    var myBarShoppingListItems: [MyBarShoppingListItem] = []
+    //commented because of global var in TableVCMyBarMyBar.swift and TableVCMyBarShoppingList.swift
+//    var myBarMyBarItems: [MyBarMyBarItem] = []
+//    var myBarShoppingListItems: [MyBarShoppingListItem] = []
     
     @IBAction func VCMBADMyBarSwitchWasPressed(_ sender: UISwitch) {
         
