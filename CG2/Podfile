@@ -9,5 +9,6 @@ target 'CG2' do
 
   pod 'XLPagerTabStrip'
   pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON'
 end

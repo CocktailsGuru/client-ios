@@ -69,3 +69,5 @@ let INGREDIENT_DETAIL_ID = "id="
 
 let INGREDIENT_DETAIL_BASE = "\(BASE)\(INGREDIENT_DETAIL_DETAIL)\(INGREDIENT_DETAIL_ID)"
 
+
+let INGREDIENT_IMG = "https://www.footyapps.com/assets/ingred/full/1.jpg"

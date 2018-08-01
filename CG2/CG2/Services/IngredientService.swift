@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import AlamofireImage
+
 
 class IngredientService {
     
@@ -115,10 +117,95 @@ class IngredientService {
             
             self.ingredientAllDetail = IngredientDetail(id: id , name: name, nameGrouped: nameGrouped, voltage: voltage, description: description, imageName: imageName, imageUrl: imageUrl, numShowed: numShowed) //, ingredientType: ingredientType
                 
-            print(self.ingredientAllDetail.imageUrl, self.ingredientAllDetail.description, self.ingredientAllDetail.name)
+  //          print(self.ingredientAllDetail.imageUrl, self.ingredientAllDetail.description, self.ingredientAllDetail.name)
 
             completion(true)
         }
+    }
+    
+    
+    //    IMAGE INGREDIENTS
+    func findImgIngredients(completion: @escaping CompletionHandler) {
+        
+        //passwords, usernames, login
+        let user = "=="
+        let password = "=="
+        let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+//        let DETAIL_URL : String = "\(INGREDIENT_DETAIL_BASE)\(ingredientId)"
+//
+//        Alamofire.request(DETAIL_URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseJSON { (response) in
+//
+//            guard let json = response.result.value as? Dictionary<String, AnyObject> else { return }
+//
+//            let ingr = json["ingredient"] as! Dictionary<String, AnyObject>
+//
+//            let id = ingr["id"] as! Int
+//            let name = ingr["name"] as! String
+//            let nameGrouped = ingr["nameGrouped"] as! String
+//            let voltage = ingr["voltage"] as! String
+//            let description = ingr["description"] as! String
+//            let imageName : String! = ingr["imageName"] as! String
+//            let imageNameString = imageName!    //help variable
+//            let imageUrl = "\(BASE)/assets/ingred/full/\(imageNameString)"
+//            let numShowed = ingr["numShowed"] as! Int
+//            //let ingredientType = ingr["ingredientType"] as! IngredientType
+//
+//            self.ingredientAllDetail = IngredientDetail(id: id , name: name, nameGrouped: nameGrouped, voltage: voltage, description: description, imageName: imageName, imageUrl: imageUrl, numShowed: numShowed) //, ingredientType: ingredientType
+//
+//            print(self.ingredientAllDetail.imageUrl, self.ingredientAllDetail.description, self.ingredientAllDetail.name)
+//
+//            completion(true)
+//        }
+//
+        
+        
+        let downloader = ImageDownloader()
+        //downloader.addAuthentication(user: "==", password: "==")
+ImageDownloader.default.addAuthentication(user: "==", password: "==")
+        let urlRequest = URLRequest(url: URL(string: INGREDIENT_IMG)!)
+        
+        downloader.download(urlRequest) { response in
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+            
+            if let image = response.result.value {
+                print(image)
+            }
+        }
+        
+        
+        
+//
+//        let downloader = ImageDownloader()
+//        downloader.addAuthentication(user: "==", password: "==")
+//
+//        let imageView = UIImageView()
+//        let url = URL(string: INGREDIENT_IMG)!
+//
+//        imageView.af_setImage(withURL: url)
+//        print(imageView.description)
+//
+//        Alamofire.request(INGREDIENT_IMG, method: .get, parameters: nil , headers:headers) .validate().responseJSON { (response) in
+//
+//          //  debugPrint(response)
+//
+//        //    print(response.request)
+//          //  print(response.response)
+//            debugPrint(response.result)
+//
+//            if let image = response.result.value {
+//                print("image downloaded: \(image)")
+//            }
+//        }
+//
+        
+        
+        
+        
     }
     
 

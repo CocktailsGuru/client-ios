@@ -1845,6 +1845,9 @@
                                                 <state key="normal" title="READ MORE">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="P84-J5-IOC" kind="show" id="BIQ-NQ-oPu"/>
+                                                </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-qM-nIr">
                                                 <rect key="frame" x="20" y="681" width="374" height="1054"/>
@@ -1995,7 +1998,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfK-Pd-vNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7419" y="-1859"/>
+            <point key="canvasLocation" x="7361" y="-1860"/>
+        </scene>
+        <!--My Bar Non Alcoholic Detail Read More-->
+        <scene sceneID="myH-2u-Bkf">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="P84-J5-IOC" customClass="VCMyBarNonAlcoholicDetailReadMore" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6kK-7g-71l"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dsh-rs-uD0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iYk-Uu-GEd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vak-36-cqX">
+                                <rect key="frame" x="20" y="28" width="374" height="378"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="eUA-j7-uCB" userLabel="VCMBADRMMainImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="aRl-bm-yks"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdZ-mY-08y">
+                                        <rect key="frame" x="0.0" y="408" width="374" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eUA-j7-uCB" firstAttribute="top" secondItem="vak-36-cqX" secondAttribute="top" id="3rc-mM-bM8"/>
+                                    <constraint firstAttribute="bottom" secondItem="qdZ-mY-08y" secondAttribute="bottom" id="8ga-Ae-YbC"/>
+                                    <constraint firstItem="qdZ-mY-08y" firstAttribute="leading" secondItem="vak-36-cqX" secondAttribute="leading" id="FNG-Wn-9kg"/>
+                                    <constraint firstItem="qdZ-mY-08y" firstAttribute="top" secondItem="eUA-j7-uCB" secondAttribute="bottom" constant="8" id="MBZ-wI-H7t"/>
+                                    <constraint firstAttribute="trailing" secondItem="eUA-j7-uCB" secondAttribute="trailing" id="ZK2-rr-OR3"/>
+                                    <constraint firstAttribute="trailing" secondItem="qdZ-mY-08y" secondAttribute="trailing" id="a2l-eJ-Awi"/>
+                                    <constraint firstItem="eUA-j7-uCB" firstAttribute="centerX" secondItem="vak-36-cqX" secondAttribute="centerX" id="sLl-2N-f5M"/>
+                                    <constraint firstItem="eUA-j7-uCB" firstAttribute="leading" secondItem="vak-36-cqX" secondAttribute="leading" id="zam-7v-KhL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vak-36-cqX" secondAttribute="bottom" constant="20" symbolic="YES" id="MeX-SP-y7z"/>
+                            <constraint firstItem="vak-36-cqX" firstAttribute="trailing" secondItem="iYk-Uu-GEd" secondAttribute="trailingMargin" id="aYc-yt-cCs"/>
+                            <constraint firstItem="vak-36-cqX" firstAttribute="leading" secondItem="iYk-Uu-GEd" secondAttribute="leadingMargin" id="llG-A9-VDY"/>
+                            <constraint firstItem="vak-36-cqX" firstAttribute="top" secondItem="6kK-7g-71l" secondAttribute="bottom" constant="8" symbolic="YES" id="xwH-Mi-2Zl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bh2-gQ-Ia0"/>
+                    <connections>
+                        <outlet property="VCMBNADRMMainImage" destination="eUA-j7-uCB" id="LMA-kS-38Y"/>
+                        <outlet property="textLabel" destination="qdZ-mY-08y" id="vud-od-Gyr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plY-tg-KK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8057.971014492754" y="-2271.195652173913"/>
         </scene>
     </scenes>
     <resources>

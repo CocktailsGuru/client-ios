@@ -12,6 +12,7 @@
 		F7037ADB20ADE87400647472 /* MBADItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7037ADA20ADE87400647472 /* MBADItems.swift */; };
 		F721358A210A0DEA00B4F831 /* VCMyBarNonAlcoholicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7213589210A0DEA00B4F831 /* VCMyBarNonAlcoholicDetail.swift */; };
 		F721358C210A1C9300B4F831 /* MBNADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721358B210A1C9300B4F831 /* MBNADCell.swift */; };
+		F721359221118B5800B4F831 /* VCMyBarNonAlcoholicDetailReadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721359121118B5800B4F831 /* VCMyBarNonAlcoholicDetailReadMore.swift */; };
 		F72C4DF8206A4C5E0051946A /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = F72C4DF7206A4C5E0051946A /* example.json */; };
 		F72C4DFC206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C4DFB206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift */; };
 		F72C4E00206D98320051946A /* VCMyBarAlcoholicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C4DFF206D98320051946A /* VCMyBarAlcoholicDetail.swift */; };
@@ -77,6 +78,7 @@
 		F7037ADA20ADE87400647472 /* MBADItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBADItems.swift; sourceTree = "<group>"; };
 		F7213589210A0DEA00B4F831 /* VCMyBarNonAlcoholicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarNonAlcoholicDetail.swift; sourceTree = "<group>"; };
 		F721358B210A1C9300B4F831 /* MBNADCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBNADCell.swift; sourceTree = "<group>"; };
+		F721359121118B5800B4F831 /* VCMyBarNonAlcoholicDetailReadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarNonAlcoholicDetailReadMore.swift; sourceTree = "<group>"; };
 		F72C4DF7206A4C5E0051946A /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		F72C4DFB206CF68A0051946A /* TVCMyBarAlcoholicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMyBarAlcoholicDetail.swift; sourceTree = "<group>"; };
 		F72C4DFF206D98320051946A /* VCMyBarAlcoholicDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarAlcoholicDetail.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				F7D472DF20B305DB00362403 /* VCMyBarAlcoholicDetailReadMore.swift */,
 				F771ED9A2063D26300C9C82A /* VCMyBarNonAlcoholic.swift */,
 				F7213589210A0DEA00B4F831 /* VCMyBarNonAlcoholicDetail.swift */,
+				F721359121118B5800B4F831 /* VCMyBarNonAlcoholicDetailReadMore.swift */,
 				F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */,
 			);
 			path = MyBar;
@@ -412,12 +415,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CG2/Pods-CG2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
@@ -490,6 +495,7 @@
 				F771ED7D2063AE0C00C9C82A /* BaseVCMyBar.swift in Sources */,
 				F771ED832063C55400C9C82A /* TableViewCellMyBarIntro.swift in Sources */,
 				F78E491F2052C5D0009E838D /* TableViewCellTwo.swift in Sources */,
+				F721359221118B5800B4F831 /* VCMyBarNonAlcoholicDetailReadMore.swift in Sources */,
 				F7FAAD74206528C100A1916D /* ProfileAlcoholicCell.swift in Sources */,
 				F7FAAD702065252C00A1916D /* VCProfileAlcoholic.swift in Sources */,
 				F75801BB21070FB40070009D /* MyBarNonAlcoholicCell.swift in Sources */,

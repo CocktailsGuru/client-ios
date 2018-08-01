@@ -179,6 +179,7 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
         if let vCMyBarAlcoholicDetailReadMore = segue.destination as? VCMyBarAlcoholicDetailReadMore{
            // if let myBarAlcoholicItem = sender as? MyBarAlcoholicItem {   //NOT WORKING
                 vCMyBarAlcoholicDetailReadMore.myBarAlcoholicItem = myBarAlcoholicItem
+           
            // }
         }
     }

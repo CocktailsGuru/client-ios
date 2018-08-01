@@ -102,7 +102,7 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
         IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
 
             self.ingredientDetail = IngredientService.instance.ingredientAllDetail
-            print(self.ingredientDetail.description)
+  //          print(self.ingredientDetail.description)
             
             
             if success {
@@ -111,6 +111,15 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
             }else{
                 print("not success")
             }
+        }
+        
+        IngredientService.instance.findImgIngredients { (success) in
+            //self.ingredientNonAlcoDetailMyBarStructs = IngredientService.instance.ingredientNonAlcoDetailMyBarStructs
+//            if success {
+//                self.collection.reloadData()
+//            }else{
+//                print("not success")
+//            }
         }
         
         
@@ -122,7 +131,7 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
 //            if complete {
 //                if myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) {
 //                    // found
-//                    print("YESSSSSSSSSSS")
+//                    print("YESSSSSS SSSSS")
 //                    VCMBNADMyBarSwitch.setOn(true, animated: false)
 //                } else {
 //                    // not
@@ -192,14 +201,14 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
         return CGSize(width: widthPerItem, height: heightPerItem)       // height:260 - ok
     }
 
-//    //segue-passing data
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vCMyBarAlcoholicDetailReadMore = segue.destination as? VCMyBarAlcoholicDetailReadMore{
-//            // if let myBarAlcoholicItem = sender as? MyBarAlcoholicItem {   //NOT WORKING
-//            vCMyBarAlcoholicDetailReadMore.myBarAlcoholicItem = myBarAlcoholicItem
-//            // }
-//        }
-//    }
+    //segue-passing data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vCMyBarNonAlcoholicDetailReadMore = segue.destination as? VCMyBarNonAlcoholicDetailReadMore{
+            vCMyBarNonAlcoholicDetailReadMore.text = self.ingredientDetail.description
+            vCMyBarNonAlcoholicDetailReadMore.imageName = self.ingredientDetail.imageName
+
+        }
+    }
 
 //    //showing bar after swiping / TODO: not working
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
