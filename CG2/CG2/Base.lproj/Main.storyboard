@@ -757,6 +757,9 @@
                             <outlet property="delegate" destination="JSi-IW-aV9" id="rmM-gq-dTg"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="V5B-eI-qfn" kind="show" identifier="tableVCMyBarShoppingListTOvCMyBarNonAlcoholicDetail" id="KAp-9Z-LKz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO5-bg-bhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1165,7 +1168,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="mwp-Da-5O6">
-                                                        <rect key="frame" x="222.66666666666663" y="0.0" width="49.999999999999972" height="50"/>
+                                                        <rect key="frame" x="222.66666666666666" y="0.0" width="49.999999999999972" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="5Hf-aL-oOg"/>
                                                             <constraint firstAttribute="height" constant="50" id="dRL-TE-U6f"/>
@@ -1409,15 +1412,15 @@
                         <viewControllerLayoutGuide type="top" id="aM2-8V-ATK"/>
                         <viewControllerLayoutGuide type="bottom" id="krf-HI-pxY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="5xP-OG-mcg">
+                    <view key="view" contentMode="scaleToFill" id="5xP-OG-mcg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOj-Kw-sjq">
-                                <rect key="frame" x="20" y="8" width="696" height="386"/>
+                                <rect key="frame" x="20" y="28" width="374" height="688"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="I4O-28-ujl" userLabel="VCMBADRMMainImage">
-                                        <rect key="frame" x="0.0" y="0.0" width="696" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="e8A-Cw-2Ef"/>
                                         </constraints>
@@ -2041,7 +2044,7 @@
         <image name="absinthe" width="150" height="270"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YSm-mH-VOy"/>
+        <segue reference="KAp-9Z-LKz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

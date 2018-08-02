@@ -107,6 +107,28 @@ class TableVCMyBarShoppingList: UITableViewController {
         return [deleteAction]
     }
     
+    //selected row info, segue id
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var item: Int = 0
+        print(Int(myBarShoppingListItems[indexPath.row].myBarShoppingListItemId))
+        item = Int(myBarShoppingListItems[indexPath.row].myBarShoppingListItemId)
+        print("PPPPPPPPPPPPPPP",myBarShoppingListItems[indexPath.row])
+        
+        performSegue(withIdentifier: "tableVCMyBarShoppingListTOvCMyBarNonAlcoholicDetail", sender: item)
+    }
+    
+    //segue-passing data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vCMyBarNonAlcoholicDetail = segue.destination as? VCMyBarNonAlcoholicDetail{
+            
+            if let item = sender as? Int {
+                vCMyBarNonAlcoholicDetail.itemMyBarMyBar = item
+                
+                //print(songItem.name)
+            }
+        }
+    }
     
 }
 
