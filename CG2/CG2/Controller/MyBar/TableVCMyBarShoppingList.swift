@@ -16,12 +16,6 @@ var myBarShoppingListItems: [MyBarShoppingListItem] = []
 
 class TableVCMyBarShoppingList: UITableViewController {
     
-    
-//
-//    @IBAction func myBarShoppingListItemSwitch(_ sender: UISwitch) {
-//
-//    }
-    
     @IBAction func myBarShoppingListItemSwitch(_ sender: UISwitch) {
         //print("BTN WAS PRESSEDDDDDDDD")
         let point = sender.convert(CGPoint.zero, to: tableView)
@@ -33,18 +27,6 @@ class TableVCMyBarShoppingList: UITableViewController {
         self.fetchCoreDataObjects()
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
-    
-    //@IBAction func myBarShoppingListItemSwitch(_ sender: UISwitch) {
-        //print("BTN WAS PRESSEDDDDDDDD")
-//        let point = sender.convert(CGPoint.zero, to: tableView)
-//        guard let indexPath = tableView.indexPathForRow(at: point) else {
-//            return
-//        }
-//        self.removeMyBarShoppingListItem(atIndexPath: indexPath)
-//        // tableView.deleteRows(at: [indexPath], with: .left)
-//        self.fetchCoreDataObjects()
-//        tableView.deleteRows(at: [indexPath], with: .automatic)
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,10 +93,8 @@ class TableVCMyBarShoppingList: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var item: Int = 0
-        print(Int(myBarShoppingListItems[indexPath.row].myBarShoppingListItemId))
         item = Int(myBarShoppingListItems[indexPath.row].myBarShoppingListItemId)
-        print("PPPPPPPPPPPPPPP",myBarShoppingListItems[indexPath.row])
-        
+
         performSegue(withIdentifier: "tableVCMyBarShoppingListTOvCMyBarNonAlcoholicDetail", sender: item)
     }
     
@@ -124,8 +104,6 @@ class TableVCMyBarShoppingList: UITableViewController {
             
             if let item = sender as? Int {
                 vCMyBarNonAlcoholicDetail.itemMyBarMyBar = item
-                
-                //print(songItem.name)
             }
         }
     }

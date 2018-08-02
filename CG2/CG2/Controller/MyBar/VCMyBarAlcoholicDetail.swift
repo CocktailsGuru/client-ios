@@ -108,8 +108,6 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
             
             self.ingredientDetail = IngredientService.instance.ingredientAllDetail
             //          print(self.ingredientDetail.description)
-            
-            
             if success {
                 //                self.collection.reloadData()
                 self.VCMBADDescription.text = self.ingredientDetail.description
@@ -136,11 +134,9 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
             if complete {
                 if myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) {
                     // found
-                    print("YESSSSSSSSSSS")
                     VCMBADMyBarSwitch.setOn(true, animated: false)
                 } else {
                     // not
-                    print("NOOOOOOOOOOOO")
                     VCMBADMyBarSwitch.setOn(false, animated: false)
                 }
             }
@@ -149,11 +145,9 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
             if complete {
                 if myBarShoppingListItems.contains( where: { $0.myBarShoppingListItemLbl == self.title }) {
                     // found
-                    print("YESSSSSSSSSSS")
                     VCMBADShoppingListSwitch.setOn(true, animated: false)
                 } else {
                     // not
-                    print("NOOOOOOOOOOOO")
                     VCMBADShoppingListSwitch.setOn(false, animated: false)
                 }
             }

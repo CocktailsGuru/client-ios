@@ -103,41 +103,28 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
                 
                 self.ingredientDetail = IngredientService.instance.ingredientAllDetail
                 //          print(self.ingredientDetail.description)
-                
-                
                 if success {
-                    //                self.collection.reloadData()
+
                     self.itemId = self.ingredientDetail.id
                     self.VCMBNADDescription.text = self.ingredientDetail.description
                     self.title = self.ingredientDetail.name
                     self.VCMBNADMainImage.image = UIImage(named: "\(self.ingredientDetail.imageName)")
                     self.imgName = self.ingredientDetail.imageName
                     
-                    
-                    print("ITEMSMYBAR: ",myBarMyBarItems)
-                    print("ITEMSSHOP: ",myBarShoppingListItems)
-                    print(self.title)
-                    
                     if (myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) ) {
                         // found
-                        print("YES11")
                         self.VCMBNADMyBarSwitch.setOn(true, animated: false)
                     } else {
                         // not
-                        print("NOO222")
                         self.VCMBNADMyBarSwitch.setOn(false, animated: false)
                     }
                     if (myBarShoppingListItems.contains( where: { $0.myBarShoppingListItemLbl == self.title }) ){
                         // found
-                        print("YES111111")
                         self.VCMBNADShoppingListSwitch.setOn(true, animated: false)
                     } else {
                         // not
-                        print("NOOO2222222")
                         self.VCMBNADShoppingListSwitch.setOn(false, animated: false)
                     }
-                    
-                    
                     
                 }else{
                     print("not success")
@@ -146,22 +133,18 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
             
         }else{
         
-            
             self.title = ingredientDetailMyBarStruct.name
             self.VCMBNADMainImage.image = UIImage(named: "\(ingredientDetailMyBarStruct.imageName)")
             self.imgName = ingredientDetailMyBarStruct.imageName
             self.itemId = ingredientDetailMyBarStruct.id
             
-            
             IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
 
                 self.ingredientDetail = IngredientService.instance.ingredientAllDetail
-      //          print(self.ingredientDetail.description)
-                
                 
                 if success {
-    //                self.collection.reloadData()
-                     self.VCMBNADDescription.text = self.ingredientDetail.description
+
+                    self.VCMBNADDescription.text = self.ingredientDetail.description
                 }else{
                     print("not success")
                 }
@@ -186,11 +169,9 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
             if complete {
                 if myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) {
                     // found
-                    print("YESSSSSS SSSSS")
                     VCMBNADMyBarSwitch.setOn(true, animated: false)
                 } else {
                     // not
-                    print("NOOOOOOOOOOOO")
                     VCMBNADMyBarSwitch.setOn(false, animated: false)
                 }
             }
@@ -200,11 +181,9 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
             if complete {
                 if myBarShoppingListItems.contains( where: { $0.myBarShoppingListItemLbl == self.title }) {
                     // found
-                    print("YESSSSSSSSSSS")
                     VCMBNADShoppingListSwitch.setOn(true, animated: false)
                 } else {
                     // not
-                    print("NOOOOOOOOOOOO")
                     VCMBNADShoppingListSwitch.setOn(false, animated: false)
                 }
             }
