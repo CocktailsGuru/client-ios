@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="MyBarMyBarItem" representedClassName="MyBarMyBarItem" syncable="YES" codeGenerationType="class">
+        <attribute name="myBarMyBarItemId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="myBarMyBarItemImg" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="myBarMyBarItemLbl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="myBarMyBarItemSwitchStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="MyBarShoppingListItem" representedClassName="MyBarShoppingListItem" syncable="YES" codeGenerationType="class">
+        <attribute name="myBarShoppingListItemId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="myBarShoppingListItemImg" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="myBarShoppingListItemLbl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="myBarShoppingListItemSwitchStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MyBarMyBarItem" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="MyBarShoppingListItem" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="MyBarMyBarItem" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="MyBarShoppingListItem" positionX="-54" positionY="18" width="128" height="105"/>
     </elements>
 </model>

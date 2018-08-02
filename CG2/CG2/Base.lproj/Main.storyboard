@@ -588,6 +588,9 @@
                             <outlet property="delegate" destination="Xdh-NR-uMH" id="Mg4-rU-3SX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="V5B-eI-qfn" kind="show" identifier="tableVCMyBarMyBarTOvCMyBarNonAlcoholicDetail" id="YSm-mH-VOy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2I-92-W2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2037,5 +2040,8 @@
         <image name="Profile" width="33" height="33"/>
         <image name="absinthe" width="150" height="270"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YSm-mH-VOy"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

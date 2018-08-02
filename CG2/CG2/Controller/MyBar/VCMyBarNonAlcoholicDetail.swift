@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+//IMPORTANT: used for alcoholic and non-alcoholic core data detail
+//TODO: core data detail = showing mybar, shoplist correct switch status
 class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout   {
 
     
@@ -76,6 +78,7 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
     var itemId : Int!
     var ingredientDetailMyBarStruct: IngredientDetailMyBarStruct!
     var ingredientDetail: IngredientDetail!
+    var itemMyBarMyBar: Int! = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,36 +94,89 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
 
         //navigation - font style, font size, font color
         //self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Arial", size: 30)!,NSAttributedStringKey.foregroundColor: UIColor.black]
-
-        self.title = ingredientDetailMyBarStruct.name
-        self.VCMBNADMainImage.image = UIImage(named: "\(ingredientDetailMyBarStruct.imageName)")
-        self.imgName = ingredientDetailMyBarStruct.imageName
-        self.itemId = ingredientDetailMyBarStruct.id
+        print(itemMyBarMyBar)
         
-        
-        IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
-
-            self.ingredientDetail = IngredientService.instance.ingredientAllDetail
-  //          print(self.ingredientDetail.description)
+        if (itemMyBarMyBar != 0) {
             
-            
-            if success {
-//                self.collection.reloadData()
-                 self.VCMBNADDescription.text = self.ingredientDetail.description
-            }else{
-                print("not success")
+            print(self.itemId )
+            IngredientService.instance.findDetailIngredients(ingredientId: itemMyBarMyBar ) { (success) in
+                
+                self.ingredientDetail = IngredientService.instance.ingredientAllDetail
+                //          print(self.ingredientDetail.description)
+                
+                
+                if success {
+                    //                self.collection.reloadData()
+                    self.itemId = self.ingredientDetail.id
+                    self.VCMBNADDescription.text = self.ingredientDetail.description
+                    self.title = self.ingredientDetail.name
+                    self.VCMBNADMainImage.image = UIImage(named: "\(self.ingredientDetail.imageName)")
+                    self.imgName = self.ingredientDetail.imageName
+                    
+                    
+                    print("ITEMSMYBAR: ",myBarMyBarItems)
+                    print("ITEMSSHOP: ",myBarShoppingListItems)
+                    print(self.title)
+                    
+                    if (myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) ) {
+                        // found
+                        print("YES11")
+                        self.VCMBNADMyBarSwitch.setOn(true, animated: false)
+                    } else {
+                        // not
+                        print("NOO222")
+                        self.VCMBNADMyBarSwitch.setOn(false, animated: false)
+                    }
+                    if (myBarShoppingListItems.contains( where: { $0.myBarShoppingListItemLbl == self.title }) ){
+                        // found
+                        print("YES111111")
+                        self.VCMBNADShoppingListSwitch.setOn(true, animated: false)
+                    } else {
+                        // not
+                        print("NOOO2222222")
+                        self.VCMBNADShoppingListSwitch.setOn(false, animated: false)
+                    }
+                    
+                    
+                    
+                }else{
+                    print("not success")
+                }
             }
-        }
+            
+        }else{
         
-        IngredientService.instance.findImgIngredients { (success) in
-            //self.ingredientNonAlcoDetailMyBarStructs = IngredientService.instance.ingredientNonAlcoDetailMyBarStructs
-//            if success {
-//                self.collection.reloadData()
-//            }else{
-//                print("not success")
-//            }
+            
+            self.title = ingredientDetailMyBarStruct.name
+            self.VCMBNADMainImage.image = UIImage(named: "\(ingredientDetailMyBarStruct.imageName)")
+            self.imgName = ingredientDetailMyBarStruct.imageName
+            self.itemId = ingredientDetailMyBarStruct.id
+            
+            
+            IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
+
+                self.ingredientDetail = IngredientService.instance.ingredientAllDetail
+      //          print(self.ingredientDetail.description)
+                
+                
+                if success {
+    //                self.collection.reloadData()
+                     self.VCMBNADDescription.text = self.ingredientDetail.description
+                }else{
+                    print("not success")
+                }
+            }
+            
+            IngredientService.instance.findImgIngredients { (success) in
+                //self.ingredientNonAlcoDetailMyBarStructs = IngredientService.instance.ingredientNonAlcoDetailMyBarStructs
+    //            if success {
+    //                self.collection.reloadData()
+    //            }else{
+    //                print("not success")
+    //            }
+            }
+            
         }
-        
         
     }
 
@@ -229,6 +285,7 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         let myBarMyBarItem = MyBarMyBarItem(context: managedContext)
 
+        myBarMyBarItem.myBarMyBarItemId = Int32(itemId)
         myBarMyBarItem.myBarMyBarItemImg = imgName
         myBarMyBarItem.myBarMyBarItemLbl = title
         myBarMyBarItem.myBarMyBarItemSwitchStatus = true
@@ -247,6 +304,7 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         let myBarShoppingListItem = MyBarShoppingListItem(context: managedContext)
 
+        myBarShoppingListItem.myBarShoppingListItemId = Int32(itemId)
         myBarShoppingListItem.myBarShoppingListItemImg = imgName
         myBarShoppingListItem.myBarShoppingListItemLbl = title
         myBarShoppingListItem.myBarShoppingListItemSwitchStatus = true

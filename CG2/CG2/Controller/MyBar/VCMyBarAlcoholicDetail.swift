@@ -234,6 +234,7 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         let myBarMyBarItem = MyBarMyBarItem(context: managedContext)
         
+        myBarMyBarItem.myBarMyBarItemId = Int32(itemId)
         myBarMyBarItem.myBarMyBarItemImg = imgName
         myBarMyBarItem.myBarMyBarItemLbl = title
         myBarMyBarItem.myBarMyBarItemSwitchStatus = true
@@ -252,6 +253,7 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         let myBarShoppingListItem = MyBarShoppingListItem(context: managedContext)
         
+        myBarShoppingListItem.myBarShoppingListItemId = Int32(itemId)
         myBarShoppingListItem.myBarShoppingListItemImg = imgName
         myBarShoppingListItem.myBarShoppingListItemLbl = title
         myBarShoppingListItem.myBarShoppingListItemSwitchStatus = true

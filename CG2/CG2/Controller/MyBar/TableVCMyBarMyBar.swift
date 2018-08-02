@@ -87,6 +87,33 @@ class TableVCMyBarMyBar: UITableViewController {
 
         return [deleteAction]
     }
+    
+    //selected row info, segue id
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+       // var item: IngredientDetailMyBarStruct!
+        var item: Int = 0
+        print(Int(myBarMyBarItems[indexPath.row].myBarMyBarItemId))
+        item = Int(myBarMyBarItems[indexPath.row].myBarMyBarItemId)
+        print("PPPPPPPPPPPPPPP",myBarMyBarItems[indexPath.row])
+       // item = myBarMyBarItems[indexPath.row]
+        
+        performSegue(withIdentifier: "tableVCMyBarMyBarTOvCMyBarNonAlcoholicDetail", sender: item)
+    }
+    
+    //segue-passing data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vCMyBarNonAlcoholicDetail = segue.destination as? VCMyBarNonAlcoholicDetail{
+            
+            if let item = sender as? Int {
+                vCMyBarNonAlcoholicDetail.itemMyBarMyBar = item
+                
+                //print(songItem.name)
+            }
+        }
+    }
+    
+    
 }
 
 extension TableVCMyBarMyBar : IndicatorInfoProvider {

@@ -105,7 +105,7 @@ class IngredientService {
             let ingr = json["ingredient"] as! Dictionary<String, AnyObject>
             
             let id = ingr["id"] as! Int
-            let name = ingr["name"] as! String
+            let name = ingr["nameGrouped"] as! String           //IMPORTANT: not name, because of in list is only nameGrouped, and I compare name and nameGrouped and they are different
             let nameGrouped = ingr["nameGrouped"] as! String
             let voltage = ingr["voltage"] as! String
             let description = ingr["description"] as! String
