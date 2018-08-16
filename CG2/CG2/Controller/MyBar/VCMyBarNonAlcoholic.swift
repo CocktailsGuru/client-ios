@@ -23,11 +23,20 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var collection: UICollectionView!
     
     override func viewDidLoad() {
+        
+
+        
+        
+        
+        
+        
         // SERVER DATA
         IngredientService.instance.findAllNonAlcoIngredients { (success) in
  //           print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
  //           print(IngredientService.instance.ingredientDetailMyBarStructs.count)
             self.ingredientNonAlcoDetailMyBarStructs = IngredientService.instance.ingredientNonAlcoDetailMyBarStructs
+            
+            
 //            print(self.ingredientDetailMyBarStructs.count,"KKKKK")
             if success {
                 self.collection.reloadData()
@@ -96,7 +105,7 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
             cell.layer.masksToBounds = false
             cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
 
-
+           
 
 //            print("SHIIIT")
             i = i + 1
@@ -106,7 +115,7 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
                             let ingredientNonAlcoDetailMyBarStructs = self.ingredientNonAlcoDetailMyBarStructs[indexPath.row]
                 
                 
-                            cell.configureCell(ingredientNonAlcoDetailMyBarStructs: ingredientNonAlcoDetailMyBarStructs)
+                cell.configureCell(ingredientNonAlcoDetailMyBarStructs: ingredientNonAlcoDetailMyBarStructs )
                 return cell
             }
             

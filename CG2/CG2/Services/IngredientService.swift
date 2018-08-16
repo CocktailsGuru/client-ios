@@ -42,7 +42,16 @@ class IngredientService {
                 let id = item["id"] as! Int
                 let name = item["nameGrouped"] as! String
                 let imageName : String! = item["imageName"] as! String
-//                print(imageName)
+                
+//                var imag = UIImage(named : "absinthe")
+//
+//                Alamofire.request("\(BASE)/assets/ingred/full/\(imageName!)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
+//
+//                    imag = response.result.value!
+//                }
+//
+                
+                
                 let voltage = item["voltage"] as! String
 
                 let ingredientNonAlcoDetailMyBarStructs = IngredientDetailMyBarStruct(id: id , name: name, imageName: imageName , voltage: voltage)
@@ -52,6 +61,77 @@ class IngredientService {
             completion(true)
         }
     }
+    
+    
+    
+    
+    //  IMAGE NON ALCO
+    func findNonAlcoIngImg(completion: @escaping CompletionHandler) {
+        
+        
+        
+//        let imageName : String! = "1150.jpg"
+//
+//        DataRequest.addAcceptableImageContentTypes(["image/jpg"]) // add jpg
+//        Alamofire.request("\(BASE)/assets/ingred/full/\(imageName!)").responseImage(completionHandler: { (response) in
+//            print("PESPESPEPSPEPSPESPESPEPSPEPSPESPESPEPSPEPSPESPESPEPSPEPSPESPESPEPSPEPSPESPESPEPSPEPSPESPESPEPSPEPSPESPESPEPSPEPS")
+//            //print(response)
+//            debugPrint(response)
+//            var imag = response.result.value
+//            //print(imag)
+//
+//        })
+        
+        
+        
+        
+        
+        
+
+        //passwords, usernames, login
+        let user = "=="
+        let password = "=="
+        let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        let imageName : String! = "1150.jpg"
+        Alamofire.request("\(BASE)/assets/ingred/full/\(imageName!)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
+            print("WWWWWWWW")
+            debugPrint(response)
+            print("EEEEEEEE")
+            let imag = response.result.value!
+            print(response.result.value!)
+            
+//            print(Result) as Any as UIImage!
+        }
+        
+        
+        
+//
+//        Alamofire.request(FULL_URL_INGREDIENTLIST_NON_ALCO, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseJSON { (response) in
+//
+//            guard let json = response.result.value as? Dictionary<String, AnyObject> else { return }
+//
+//            let ingrDict = json["list"] as! Array<NSDictionary>
+//            for item in ingrDict {
+//
+//                let id = item["id"] as! Int
+//                let name = item["nameGrouped"] as! String
+//                let imageName : String! = item["imageName"] as! String
+//            }
+//            completion(true)
+//        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
 //    ALCO INGREDIENTS
@@ -124,6 +204,61 @@ class IngredientService {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // INGREDIENT IMAGEDOWNLOAD
+    func findIngredientImage(imageName: String ,completion: @escaping CompletionHandler) {
+        
+        //passwords, usernames, login
+        let user = "=="
+        let password = "=="
+        let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        let BIG_INGREDIENT_IMAGE : String = "\(BASE_INGREDIENT_IMG)\(imageName)"
+        
+        print("ee: \(BIG_INGREDIENT_IMAGE)")
+        
+        //var imag = UIImage(named : "absinthe")
+        
+        Alamofire.request(BIG_INGREDIENT_IMAGE, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
+            //print(response)
+            mainImag = response.result.value
+            print(mainImag.cgImage)
+            
+            completion(true)
+
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //    IMAGE INGREDIENTS
     func findImgIngredients(completion: @escaping CompletionHandler) {
         
@@ -161,49 +296,7 @@ class IngredientService {
 //        }
 //
         
-        
-        let downloader = ImageDownloader()
-        //downloader.addAuthentication(user: "==", password: "==")
-ImageDownloader.default.addAuthentication(user: "==", password: "==")
-        let urlRequest = URLRequest(url: URL(string: INGREDIENT_IMG)!)
-        
-        downloader.download(urlRequest) { response in
-            print(response.request)
-            print(response.response)
-            debugPrint(response.result)
-            
-            if let image = response.result.value {
-                print(image)
-            }
-        }
-        
-        
-        
-//
-//        let downloader = ImageDownloader()
-//        downloader.addAuthentication(user: "==", password: "==")
-//
-//        let imageView = UIImageView()
-//        let url = URL(string: INGREDIENT_IMG)!
-//
-//        imageView.af_setImage(withURL: url)
-//        print(imageView.description)
-//
-//        Alamofire.request(INGREDIENT_IMG, method: .get, parameters: nil , headers:headers) .validate().responseJSON { (response) in
-//
-//          //  debugPrint(response)
-//
-//        //    print(response.request)
-//          //  print(response.response)
-//            debugPrint(response.result)
-//
-//            if let image = response.result.value {
-//                print("image downloaded: \(image)")
-//            }
-//        }
-//
-        
-        
+
         
         
     }

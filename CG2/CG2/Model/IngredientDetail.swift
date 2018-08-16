@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//import UIKit
 
 class IngredientDetail {
     
@@ -18,6 +19,7 @@ class IngredientDetail {
     private var _imageName: String!
     private var _imageUrl: String!
     private var _numShowed: Int!
+
    // private var _ingredientType: IngredientType!
    
 

@@ -10,6 +10,8 @@
 import UIKit
 import CoreData
 
+var mainImag : UIImage!
+
 class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout   {
     
     private class func getContext() -> NSManagedObjectContext{
@@ -77,6 +79,7 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
     var itemId : Int!
     var ingredientDetailMyBarStruct: IngredientDetailMyBarStruct!
     var ingredientDetail: IngredientDetail!
+    var imagg : UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,8 +107,27 @@ class VCMyBarAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIColl
         self.imgName = ingredientDetailMyBarStruct.imageName
         self.itemId = ingredientDetailMyBarStruct.id
         
-        IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
+        
+        print("\(ingredientDetailMyBarStruct.imageName!)")
+        
+        
+        IngredientService.instance.findIngredientImage(imageName: "\(ingredientDetailMyBarStruct.imageName!)"){ (success) in
             
+            
+            print("kk \(mainImag)")
+            self.imagg = mainImag
+            
+            if success {
+                print("@@@@@@@@2222")
+                self.VCMBADMainImage.image = self.imagg
+            }else{
+                print("not success")
+            }
+     
+        }
+        
+        IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
+            print("EERRRRRR")
             self.ingredientDetail = IngredientService.instance.ingredientAllDetail
             //          print(self.ingredientDetail.description)
             if success {

@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 struct IngredientDetailMyBarStruct {
     var id : Int!
     var name : String!
     var imageName : String!
     var voltage : String!
-
+   // var imag : UIImage!
  
+    
+    
 //    var calculatedRating : Int!
 //    var alcoVolumeid : Int!
 //    var numOfFavorite : Int!

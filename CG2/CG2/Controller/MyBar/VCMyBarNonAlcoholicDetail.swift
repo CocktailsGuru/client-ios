@@ -79,7 +79,8 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
     var ingredientDetailMyBarStruct: IngredientDetailMyBarStruct!
     var ingredientDetail: IngredientDetail!
     var itemMyBarMyBar: Int! = 0
-
+    var imagg : UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         MBNADCollectionView.dataSource = self
@@ -111,6 +112,22 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
                     self.VCMBNADMainImage.image = UIImage(named: "\(self.ingredientDetail.imageName)")
                     self.imgName = self.ingredientDetail.imageName
                     
+                    IngredientService.instance.findIngredientImage(imageName: "\(self.ingredientDetail.imageName)"){ (success) in
+                        
+                        
+                        print("kk \(mainImag)")
+                        self.imagg = mainImag
+                        
+                        if success {
+                            print("@@@@@@@@2222")
+                            self.VCMBNADMainImage.image = self.imagg
+                        }else{
+                            print("not success")
+                        }
+                        
+                    }
+                    
+                    
                     if (myBarMyBarItems.contains( where: { $0.myBarMyBarItemLbl == self.title }) ) {
                         // found
                         self.VCMBNADMyBarSwitch.setOn(true, animated: false)
@@ -137,6 +154,21 @@ class VCMyBarNonAlcoholicDetail: UIViewController, UICollectionViewDelegate, UIC
             self.VCMBNADMainImage.image = UIImage(named: "\(ingredientDetailMyBarStruct.imageName)")
             self.imgName = ingredientDetailMyBarStruct.imageName
             self.itemId = ingredientDetailMyBarStruct.id
+            
+            IngredientService.instance.findIngredientImage(imageName: "\(ingredientDetailMyBarStruct.imageName!)"){ (success) in
+                
+                
+                print("kk \(mainImag)")
+                self.imagg = mainImag
+                
+                if success {
+                    print("@@@@@@@@2222")
+                    self.VCMBNADMainImage.image = self.imagg
+                }else{
+                    print("not success")
+                }
+                
+            }
             
             IngredientService.instance.findDetailIngredients(ingredientId: self.itemId ) { (success) in
 
