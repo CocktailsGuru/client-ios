@@ -31,8 +31,8 @@ class VCMyBarAlcoholicDetailReadMore: UIViewController {
         
         //self.title = myBarAlcoholicItem.name
         //self.VCMBADRMMainImage.image = UIImage(named: "\(myBarAlcoholicItem.image)")
-        self.VCMBADRMMainImage.image = UIImage(named: "\(imageName)")
-        //self.VCMBADRMMainImage.image = mainImag
+        //self.VCMBADRMMainImage.image = UIImage(named: "\(imageName)")
+        self.VCMBADRMMainImage.image = mainImag
 
         self.textLabel.text = text
         

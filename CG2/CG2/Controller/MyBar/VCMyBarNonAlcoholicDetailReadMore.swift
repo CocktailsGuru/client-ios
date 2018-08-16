@@ -25,8 +25,8 @@ class VCMyBarNonAlcoholicDetailReadMore: UIViewController {
         //self.tabBarController?.tabBar.isHidden = true
         
         //self.title = myBarAlcoholicItem.name
-        self.VCMBNADRMMainImage.image = UIImage(named: "\(imageName)")
-        //self.VCMBNADRMMainImage.image = mainImag
+        //self.VCMBNADRMMainImage.image = UIImage(named: "\(imageName)")
+        self.VCMBNADRMMainImage.image = mainImag
         
         self.textLabel.text = text
         
