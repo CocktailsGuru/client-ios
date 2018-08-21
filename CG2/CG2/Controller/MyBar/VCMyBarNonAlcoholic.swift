@@ -113,9 +113,9 @@ class VCMyBarNonAlcoholic: UIViewController, UICollectionViewDelegate, UICollect
   //          print(i)
             if (self.ingredientNonAlcoDetailMyBarStructs.count > 0){
                             let ingredientNonAlcoDetailMyBarStructs = self.ingredientNonAlcoDetailMyBarStructs[indexPath.row]
+                let img = self.ingredientNonAlcoDetailMyBarStructs[indexPath.row].imageName
                 
-                
-                cell.configureCell(ingredientNonAlcoDetailMyBarStructs: ingredientNonAlcoDetailMyBarStructs )
+                cell.configureCell(ingredientNonAlcoDetailMyBarStructs: ingredientNonAlcoDetailMyBarStructs, img: img! )
                 return cell
             }
             
