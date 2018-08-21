@@ -57,13 +57,13 @@ class MyBarNonAlcoholicCell: UICollectionViewCell {
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
-        let BIG_INGREDIENT_IMAGE : String = "\(INGREDIENTIMG)\(img)"
+        let SMALL_INGREDIENT_IMAGE : String = "\(INGREDIENTIMG)\(img)"
         
-        print("ee: \(BIG_INGREDIENT_IMAGE)")
+        print("ee: \(SMALL_INGREDIENT_IMAGE)")
         
         //var imag = UIImage(named : "absinthe")
         
-        Alamofire.request(BIG_INGREDIENT_IMAGE, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
+        Alamofire.request(SMALL_INGREDIENT_IMAGE, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
             //print(response)
             var helpImg : UIImage
             helpImg = response.result.value!
