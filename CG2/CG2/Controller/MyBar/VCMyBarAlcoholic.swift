@@ -58,8 +58,9 @@ class VCMyBarAlcoholic: UIViewController, UICollectionViewDelegate, UICollection
 
             if (self.ingredientAlcoDetailMyBarStructs.count > 0){
                 let ingredientAlcoDetailMyBarStructs = self.ingredientAlcoDetailMyBarStructs[indexPath.row]
+                let img = self.ingredientAlcoDetailMyBarStructs[indexPath.row].imageName
 
-                cell.configureCell(ingredientAlcoDetailMyBarStructs: ingredientAlcoDetailMyBarStructs)
+                cell.configureCell(ingredientAlcoDetailMyBarStructs: ingredientAlcoDetailMyBarStructs, img: img!)
                 return cell
             }
             

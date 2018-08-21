@@ -185,7 +185,7 @@ class IngredientService {
             let ingr = json["ingredient"] as! Dictionary<String, AnyObject>
             
             let id = ingr["id"] as! Int
-            let name = ingr["nameGrouped"] as! String           //IMPORTANT: not name, because of in list is only nameGrouped, and I compare name and nameGrouped and they are different
+            let name = ingr["nameGrouped"] as! String           //IMPORTANT: not name, because of: in list is only nameGrouped, and I compare name and nameGrouped and they are different
             let nameGrouped = ingr["nameGrouped"] as! String
             let voltage = ingr["voltage"] as! String
             let description = ingr["description"] as! String
@@ -245,8 +245,32 @@ class IngredientService {
     }
     
     
-    
-    
+    // COLLECTION IMAGEDOWNLOAD
+    func findIngredientCollectionImage(imageName: String ,completion: @escaping CompletionHandler) {
+        
+        //passwords, usernames, login
+        let user = "=="
+        let password = "=="
+        let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        let BIG_INGREDIENT_IMAGE : String = "\(BASE_INGREDIENT_IMG)\(imageName)"
+        
+        print("ee: \(BIG_INGREDIENT_IMAGE)")
+        
+        //var imag = UIImage(named : "absinthe")
+        
+        Alamofire.request(BIG_INGREDIENT_IMAGE, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
+            //print(response)
+            var helpImg : UIImage
+            helpImg = response.result.value!
+            print(helpImg.cgImage)
+            
+            completion(true)
+            
+        }
+    }
     
     
     
