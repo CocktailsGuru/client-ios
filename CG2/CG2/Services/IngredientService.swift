@@ -237,7 +237,7 @@ class IngredientService {
         Alamofire.request(BIG_INGREDIENT_IMAGE, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
             //print(response)
             mainImag = response.result.value
-            print(mainImag.cgImage)
+            //print(mainImag.cgImage)
             
             completion(true)
 

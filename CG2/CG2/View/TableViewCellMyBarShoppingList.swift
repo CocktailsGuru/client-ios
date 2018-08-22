@@ -43,10 +43,14 @@ class TableViewCellMyBarShoppingList: UITableViewCell {
         //var imag = UIImage(named : "absinthe")
         
         Alamofire.request(SMALL_INGREDIENT_IMAGE, method: .get, parameters: nil, encoding: JSONEncoding.default, headers:headers) .validate().responseImage { response in
-            //print(response)
-            var helpImg : UIImage
-            helpImg = response.result.value!
-            //print("KKKKK: ",helpImg)
+            
+            var helpImg = UIImage(named: "1.png")   // TODO : after deleting local images, add 1.png
+            if response.result.value != nil {
+                helpImg = response.result.value!
+            }else{
+                print("Doesn’t contain a value.")
+            }
+            
             self.myBarShoppingListItemImg.image = helpImg
             print("tt: ",self.myBarShoppingListItemImg.image.debugDescription)
             
