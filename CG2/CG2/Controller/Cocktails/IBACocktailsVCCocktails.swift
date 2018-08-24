@@ -1,5 +1,5 @@
 //
-//  TableViewControllerOne.swift
+//  IBACocktailsVCCocktails.swift
 //  CG2
 //
 //  Created by Tomáš Dobrotka on 09/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
-class TableViewControllerOne: UITableViewController {
+class IBACocktailsVCCocktails: UITableViewController {
 
     
     var cocktailList = CocktailList()
@@ -113,7 +113,7 @@ class TableViewControllerOne: UITableViewController {
 
 }
 
-extension TableViewControllerOne : IndicatorInfoProvider {
+extension IBACocktailsVCCocktails : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "INTRO")
     }

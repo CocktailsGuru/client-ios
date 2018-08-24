@@ -1,5 +1,5 @@
 //
-//  TableViewControllerTwo.swift
+//  PackagesVCCocktails.swift
 //  CG2
 //
 //  Created by Tomáš Dobrotka on 09/03/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class TableViewControllerTwo: UITableViewController {
+class PackagesVCCocktails: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class TableViewControllerTwo: UITableViewController {
 
 }
 
-extension TableViewControllerTwo : IndicatorInfoProvider {
+extension PackagesVCCocktails : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "IBA")
     }

@@ -1,5 +1,5 @@
 //
-//  TableViewControllerThree.swift
+//  Top100VCCocktails.swift
 //  CG2
 //
 //  Created by Tomáš Dobrotka on 09/03/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class TableViewControllerThree: UITableViewController {
+class Top100VCCocktails: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class TableViewControllerThree: UITableViewController {
     
 }
 
-extension TableViewControllerThree : IndicatorInfoProvider {
+extension Top100VCCocktails : IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "TOP 100")
     }

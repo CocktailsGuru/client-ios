@@ -188,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="341" y="-3069"/>
         </scene>
-        <!--Table View Controller Two-->
+        <!--PackagesVC Cocktails-->
         <scene sceneID="ib3-OM-0up">
             <objects>
-                <tableViewController storyboardIdentifier="TableTwo" id="rsD-r3-uRu" customClass="TableViewControllerTwo" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableTwo" id="rsD-r3-uRu" customClass="PackagesVCCocktails" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="690" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ECs-WJ-dfp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="3106" y="-3069"/>
         </scene>
-        <!--Table View Controller Three-->
+        <!--Top100VC Cocktails-->
         <scene sceneID="R1f-St-XAH">
             <objects>
-                <tableViewController storyboardIdentifier="TableThree" id="gcf-u8-oF7" customClass="TableViewControllerThree" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableThree" id="gcf-u8-oF7" customClass="Top100VCCocktails" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZiQ-Tb-w73">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,10 +308,10 @@
             </objects>
             <point key="canvasLocation" x="1102.8985507246377" y="-3069.29347826087"/>
         </scene>
-        <!--Table View Controller One-->
+        <!--CocktailsVC Cocktails-->
         <scene sceneID="qM6-0b-NTh">
             <objects>
-                <tableViewController storyboardIdentifier="TableOne" id="9fv-Qv-NBD" customClass="TableViewControllerOne" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableOne" id="9fv-Qv-NBD" customClass="IBACocktailsVCCocktails" customModule="CG2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="690" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T8G-gr-xZU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

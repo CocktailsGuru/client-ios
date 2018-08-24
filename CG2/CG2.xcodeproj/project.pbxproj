@@ -51,11 +51,11 @@
 		F771ED972063D24F00C9C82A /* VCMyBarAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED962063D24F00C9C82A /* VCMyBarAlcoholic.swift */; };
 		F771ED9B2063D26300C9C82A /* VCMyBarNonAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED9A2063D26300C9C82A /* VCMyBarNonAlcoholic.swift */; };
 		F771ED9D2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */; };
-		F78E49192052C231009E838D /* TableViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49182052C231009E838D /* TableViewControllerOne.swift */; };
+		F78E49192052C231009E838D /* IBACocktailsVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49182052C231009E838D /* IBACocktailsVCCocktails.swift */; };
 		F78E491B2052C25D009E838D /* TableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E491A2052C25D009E838D /* TableViewCellOne.swift */; };
-		F78E491D2052C5A9009E838D /* TableViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E491C2052C5A9009E838D /* TableViewControllerTwo.swift */; };
+		F78E491D2052C5A9009E838D /* PackagesVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E491C2052C5A9009E838D /* PackagesVCCocktails.swift */; };
 		F78E491F2052C5D0009E838D /* TableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E491E2052C5D0009E838D /* TableViewCellTwo.swift */; };
-		F78E49212052C60C009E838D /* TableViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49202052C60C009E838D /* TableViewControllerThree.swift */; };
+		F78E49212052C60C009E838D /* Top100VCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49202052C60C009E838D /* Top100VCCocktails.swift */; };
 		F78E49232052C621009E838D /* TableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49222052C621009E838D /* TableViewCellThree.swift */; };
 		F78E49262052FE89009E838D /* BaseVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E49252052FE89009E838D /* BaseVCCocktails.swift */; };
 		F78E4937205845E7009E838D /* HeaderVCCocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4936205845E7009E838D /* HeaderVCCocktails.swift */; };
@@ -119,11 +119,11 @@
 		F771ED962063D24F00C9C82A /* VCMyBarAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarAlcoholic.swift; sourceTree = "<group>"; };
 		F771ED9A2063D26300C9C82A /* VCMyBarNonAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMyBarNonAlcoholic.swift; sourceTree = "<group>"; };
 		F771ED9C2063D26E00C9C82A /* TableViewCellMyBarNonAlcoholic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMyBarNonAlcoholic.swift; sourceTree = "<group>"; };
-		F78E49182052C231009E838D /* TableViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerOne.swift; sourceTree = "<group>"; };
+		F78E49182052C231009E838D /* IBACocktailsVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBACocktailsVCCocktails.swift; sourceTree = "<group>"; };
 		F78E491A2052C25D009E838D /* TableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOne.swift; sourceTree = "<group>"; };
-		F78E491C2052C5A9009E838D /* TableViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTwo.swift; sourceTree = "<group>"; };
+		F78E491C2052C5A9009E838D /* PackagesVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesVCCocktails.swift; sourceTree = "<group>"; };
 		F78E491E2052C5D0009E838D /* TableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTwo.swift; sourceTree = "<group>"; };
-		F78E49202052C60C009E838D /* TableViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerThree.swift; sourceTree = "<group>"; };
+		F78E49202052C60C009E838D /* Top100VCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top100VCCocktails.swift; sourceTree = "<group>"; };
 		F78E49222052C621009E838D /* TableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellThree.swift; sourceTree = "<group>"; };
 		F78E49252052FE89009E838D /* BaseVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCCocktails.swift; sourceTree = "<group>"; };
 		F78E4936205845E7009E838D /* HeaderVCCocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVCCocktails.swift; sourceTree = "<group>"; };
@@ -282,11 +282,11 @@
 			children = (
 				F78E4936205845E7009E838D /* HeaderVCCocktails.swift */,
 				F78E49252052FE89009E838D /* BaseVCCocktails.swift */,
-				F78E49182052C231009E838D /* TableViewControllerOne.swift */,
+				F78E49182052C231009E838D /* IBACocktailsVCCocktails.swift */,
 				F78E491A2052C25D009E838D /* TableViewCellOne.swift */,
-				F78E491C2052C5A9009E838D /* TableViewControllerTwo.swift */,
+				F78E491C2052C5A9009E838D /* PackagesVCCocktails.swift */,
 				F78E491E2052C5D0009E838D /* TableViewCellTwo.swift */,
-				F78E49202052C60C009E838D /* TableViewControllerThree.swift */,
+				F78E49202052C60C009E838D /* Top100VCCocktails.swift */,
 				F78E49222052C621009E838D /* TableViewCellThree.swift */,
 			);
 			path = Cocktails;
@@ -477,12 +477,12 @@
 				F78E49262052FE89009E838D /* BaseVCCocktails.swift in Sources */,
 				F771ED912063D22A00C9C82A /* TableViewCellMyBarShoppingList.swift in Sources */,
 				F721358A210A0DEA00B4F831 /* VCMyBarNonAlcoholicDetail.swift in Sources */,
-				F78E491D2052C5A9009E838D /* TableViewControllerTwo.swift in Sources */,
-				F78E49212052C60C009E838D /* TableViewControllerThree.swift in Sources */,
+				F78E491D2052C5A9009E838D /* PackagesVCCocktails.swift in Sources */,
+				F78E49212052C60C009E838D /* Top100VCCocktails.swift in Sources */,
 				F7037AD920ADE84200647472 /* MBADCell.swift in Sources */,
 				F758019B21050AE90070009D /* MyIngredient.swift in Sources */,
 				F7FAAD652064F48F00A1916D /* MyBarAlcoholicItems.swift in Sources */,
-				F78E49192052C231009E838D /* TableViewControllerOne.swift in Sources */,
+				F78E49192052C231009E838D /* IBACocktailsVCCocktails.swift in Sources */,
 				F771ED852063C58700C9C82A /* TableVCMybarIntro.swift in Sources */,
 				F7FAAD72206528AE00A1916D /* ProfileAlcoholicItems.swift in Sources */,
 				F771ED972063D24F00C9C82A /* VCMyBarAlcoholic.swift in Sources */,
